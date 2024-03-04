@@ -4,12 +4,12 @@ Timeline:
 
 | Scientific Calculator |
 
-| --- | --- |
-| Year | 2022 |
-| Semester | 3 |
-| For Coursework | Data Structures & Algorithms |
-| Tool(s)/Resource(s) Involved | C++ |
-| Lecturer | Rafie Djajasapoena |
+| --- | --- 
+| Year | 2022 
+| Semester | 3 
+| For Coursework | Data Structures & Algorithms 
+| Tool(s)/Resource(s) Involved | C++ 
+| Lecturer | Rafie Djajasapoena 
 
 **Description:** 
 
