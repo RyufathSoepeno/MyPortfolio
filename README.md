@@ -3,6 +3,7 @@
 Timeline:
 
 | Scientific Calculator |
+
 | --- | --- |
 | Year | 2022 |
 | Semester | 3 |
