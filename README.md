@@ -1,14 +1,15 @@
 # MyPortfolio
 
 Timeline:
-| Scientific Calculator |
 
+| Scientific Calculator |
 |---|---|
 | Year | 2022 |
 | Semester | 3 |
 | For Coursework | Data Structures & Algorithms |
 | Tool(s)/Resource(s) Involved | C++ |
 | Lecturer | Rafie Djajasapoena |
+
 **Description:** 
 
 2022-now: Web Development Portfolio
