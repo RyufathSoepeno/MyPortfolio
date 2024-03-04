@@ -2,11 +2,24 @@
 
 Timeline:
 
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+2024:
+
+2023:
+
+2022:
+
+| Project Name | Description | Tools Used | Screenshot | URL |
+|--------------|-------------|------------|------------|------|
+|Scientific Calculator| K | C++ | K | [Link]{https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Scientific%20Calculator}|
+
+Scientific Calculator:
+| Scientific Calculator       | Info                          |
+|-----------------------------|-------------------------------|
+| Year                        | 2022                          |
+| Semester                    | 3                             |
+| For Coursework              | Data Structures & Algorithms  |
+| Tool(s)/Resource(s)         | C++                           |
+| Lecturer                    | Rafie Djajasapoena            |
 
 **Description:** 
 
