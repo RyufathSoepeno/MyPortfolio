@@ -8,8 +8,8 @@ Timeline:
 | Project Name | Description | Tools Used | Screenshot(s) | URL |
 |--------------|-------------|------------|---------------|-----|
 |Budget Buddy| K | Flutter, Figma, Microsoft 365 | K | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Budget%20Buddy_release4)|
-|Technical Writing for Eco-Smart House| K | Microsoft 365, Autodesk | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Technical%20Writing%20for%20Eco-Smart%20House)|
-|Network Analysis with Python| K | Python | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Network%20Analysis%20with%20Python)|
+|Technical Writing for Eco-Smart House| K | Microsoft 365, Autodesk | K | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Technical%20Writing%20for%20Eco-Smart%20House)|
+|Network Analysis with Python| K | Python | K | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Network%20Analysis%20with%20Python)|
 
 2022:
 | Project Name | Description | Tools Used | Screenshot(s) | URL |
