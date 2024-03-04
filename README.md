@@ -2,13 +2,11 @@
 
 Timeline:
 
-| Scientific Calculator                                       |
-|-----------------------------|-------------------------------|
-| Year                        | 2022                          |
-| Semester                    | 3                             |
-| For Coursework              | Data Structures & Algorithms  |
-| Tool(s)/Resource(s)         | C++                           |
-| Lecturer                    | Rafie Djajasapoena            |
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 **Description:** 
 
