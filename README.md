@@ -3,7 +3,7 @@
 Timeline:
 
 | Scientific Calculator |
-|---|---|
+| --- | --- |
 | Year | 2022 |
 | Semester | 3 |
 | For Coursework | Data Structures & Algorithms |
