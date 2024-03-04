@@ -10,7 +10,7 @@ Timeline:
 
 | Project Name | Description | Tools Used | Screenshot | URL |
 |--------------|-------------|------------|------------|------|
-|Scientific Calculator| K | C++ | K | [Link]{https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Scientific%20Calculator}|
+|Scientific Calculator| K | C++ | K | [Link](https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Scientific%20Calculator)|
 
 Scientific Calculator:
 | Scientific Calculator       | Info                          |
