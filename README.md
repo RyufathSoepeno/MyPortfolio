@@ -5,7 +5,7 @@ Timeline:
 Ongoing Projects:
 | Project Name | Description | Resources Used | Screenshot(s) | URL |
 |--------------|-------------|----------------|---------------|-----|
-|Chicken Wings Restaurant| <br> Since: 2022 <br> I independently developed an HTML website and Android app on my available time for a chicken wings restaurant, which allows users to order wings. Currently, the project is in its Phase 3.0 development stage.  <br> <br> | HTML/CSS, Javascript, Java, Kotlin | ![Wingstop](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/c6e72e78-2bf6-49ff-8c35-131a7f0213e6) | <ul><li><a href="file:///C:/Users/ASUS/OneDrive%20-%20Sampoerna%20University/Documents/HTML%20CSS%20JAVASCRIPT/Example6(The%20Eatery%203.0).html" target="_blank">Website</a></li><li><a href="https://drive.google.com/file/d/1RFbUZg6y2vNwiMHi59w2xhjowK4fu42j/view?usp=sharing" target="_blank">App</a></li></ul>|
+|Chicken Wings Restaurant| <br> Since: 2022 <br> I independently developed an HTML website and Android app on my available time for a chicken wings restaurant, which allows users to order wings. Currently, the project is in its Phase 3.0 development stage.  <br> <br> | HTML/CSS, Javascript, Java, Kotlin | ![Wingstop](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/c6e72e78-2bf6-49ff-8c35-131a7f0213e6) | <ul><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/blob/main/Web%20Development%20Portfolio/The%20Eatery%203.0/The%20Eatery.html" target="_blank">Website</a></li><li><a href="https://drive.google.com/file/d/1RFbUZg6y2vNwiMHi59w2xhjowK4fu42j/view?usp=sharing" target="_blank">App</a></li></ul>|
 
 2024: Coming Soon
 
