@@ -1,0 +1,46 @@
+/* Header styles */
+header {
+  background-color: #0047AB;
+  color: white;
+  padding: 20px;
+}
+
+header h1 {
+  font-family: Garamond, serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  background-color: #0047AB;
+  color: white;
+}
+
+td {
+  text-align: center;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}

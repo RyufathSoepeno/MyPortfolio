@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between; /* Aligns items with space between them */
+  align-items: center;
+  background-color: #0047AB;
+  color: white;
+  padding: 30px;
+  margin-right: -30px; /* Adjust this as needed */
+}
+
+.logo {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+.logo h1 {
+  font-family: Garamond, serif;
+  font-weight: bold;
+}
+
+/* History section styles */
+#historySection {
+  margin-left: auto; /* Pushes the history section to the right */
+}
+
+#historySection h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#historyList li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+section {
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+footer {
+  background-color: #0047AB;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

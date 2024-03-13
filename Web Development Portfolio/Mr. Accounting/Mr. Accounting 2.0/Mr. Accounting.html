@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Accounting</title>
+  <link rel="stylesheet" href="Mr. Accounting.css">
+</head>
+<body>
+  <header>
+	  <div class="logo">
+		<h1>Mr. Accounting</h1>
+	  </div>
+	  <section id="historySection">
+		<h2 onclick="goToPage('history.html')">History</h2>
+		<ul id="historyList">
+		</ul>
+	  </section>
+  </header>
+
+  
+  <section>
+  
+    <p>Welcome to Mr. Accounting, your financial accounting solution. Please follow the instructions:</p>
+    <ul>
+      <li>Fill in the input boxes with the Name, Date, Credit, and Debit separately.</li>
+      <li>Click on a column name to rename it.</li>
+      <li>Each input will add a new row to the table.</li>
+    </ul>
+	
+    <form id="accountingForm">
+      <input type="text" id="name" placeholder="Name">
+      <input type="date" id="date">
+      <input type="number" id="credit" placeholder="Credit">
+      <input type="number" id="debit" placeholder="Debit">
+      <button type="button" onclick="addRow()">Add Entry</button>
+    </form>
+	
+    <table id="accountingTable">
+      <thead>
+        <tr>
+          <th onclick="renameColumn(0)">Name</th>
+          <th onclick="renameColumn(1)">Date</th>
+          <th onclick="renameColumn(2)">Credit</th>
+          <th onclick="renameColumn(3)">Debit</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+	
+  </section>
+  
+  <footer>
+    <p>All rights reserved.</p>
+  </footer>
+  
+  <script src="Mr. Accounting.js"></script>
+</body>
+</html>
