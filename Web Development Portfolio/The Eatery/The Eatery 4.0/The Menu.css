@@ -1,0 +1,138 @@
+		/* Header styles */
+		header {
+		  
+		  background-color: #046A3A;
+		  padding: 20px;
+		  border-top-left-radius: 15px;
+		  border-top-right-radius: 15px;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		}
+		
+		body {
+			background-color: #F4EAB7;
+			font-family: 'Anuphan', sans-serif;
+			font-size: 16px;
+			margin: 0; /* Both margin and padding to remove background on header and footer */
+			padding: 0;
+		}
+
+        .menu-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+			margin: 0 auto; /** To center the menu box */
+        }
+
+        .menu-item {
+            margin-bottom: 30px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+			width:200px;
+			height:200px;
+        }
+
+        .menu-item-description {
+            margin-top: 10px;
+        }
+
+        .order-button,
+		.remove-button {
+			display:inline-block;
+            background-color: #046A3A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover,
+		.remove-button:hover		{
+            background-color: #024027;
+        }
+
+        .MyRestaurant {
+			font-family: "Lobster", cursive; /* Corrected 'display' to 'cursive' */
+			font-weight: bold;
+			font-style: italic;
+            color: white;
+            font-size: 24px;
+        }
+		
+		#order-summary-container {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			padding: 20px;
+			border-radius: 5px;
+			animation: slideInRight 0.5s ease forwards;
+			max-height: 300px;
+			overflow-y: auto;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+		}
+
+		@keyframes slideInRight {
+			from {
+				transform: translateX(100%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		#order-summary-container h2 {
+			margin-top: 0;
+		}
+
+		#order-summary {
+			list-style: none;
+			padding: 0;
+			margin: 10px 0;
+		}
+
+		#order-summary li {
+			margin-bottom: 5px;
+		}
+
+		#confirm-order-button {
+			display: block;
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			transition: background-color 0.3s;
+			margin-top: 10px;
+		}
+
+		#confirm-order-button:hover {
+			background-color: #45a049;
+		}
+
+
+		footer {
+			background-color: #046A3A;
+			padding: 20px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			text-align: center;
+				color: white;
+		}
+
+			
+				
