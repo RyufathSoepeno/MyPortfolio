@@ -2,11 +2,16 @@
 
 Timeline:
 
+How to download apk:
+1. Click the "App link"
+2. Click the three dots on the top right
+3. Click download (reccomended download through mobile phone)
+
 Ongoing Projects:
 | Project Name | Description | Resources Used | Screenshot(s) | URL |
 |--------------|-------------|----------------|---------------|-----|
-|Mr. Accounting|<br> Since: 2023 <br> Independently developed an HTML website and Android App for an accounting application, which served for all accounting needs. Currently, the project is in its Phase 2.0 development stage. <br> <br> | HTML/CSS, Javascript, Kotlin | ![Mr  Accounting](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/6e54890d-08e2-44b3-90dc-2df95da957fe)| <ul><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Web%20Development%20Portfolio/Mr.%20Accounting/Mr.%20Accounting%202.0" target="_blank">Website</a></li><li><a href="https://drive.google.com/file/d/1-1eQzyTyBqRwP9XnFl_PydIoCd78Rgdj/view?usp=sharing" target="_blank">App</a></li></ul>|
-|Chicken Wings Restaurant| <br> Since: 2022 <br> Independently developed an HTML website and Android app on my available time for a chicken wings restaurant, which allows users to order wings. Currently, the project is in its Phase 3.0 development stage.  <br> <br> | HTML/CSS, Javascript, Kotlin | ![Wingstop](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/c6e72e78-2bf6-49ff-8c35-131a7f0213e6) | <ul><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Web%20Development%20Portfolio/The%20Eatery/The%20Eatery%204.0" target="_blank">Website</a></li><li><a href="https://drive.google.com/file/d/1RFbUZg6y2vNwiMHi59w2xhjowK4fu42j/view?usp=sharing" target="_blank">App</a></li></ul>|
+|Mr. Accounting|<br> Since: 2023 <br> Independently developed an HTML website and Android App for an accounting application, which served for all accounting needs. Currently, the project is in its Phase 2.0 development stage. <br> <br> | HTML/CSS, Javascript, Kotlin | ![Mr  Accounting](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/6e54890d-08e2-44b3-90dc-2df95da957fe)| <ul><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Web%20Development%20Portfolio/Mr.%20Accounting/Mr.%20Accounting%202.0" target="_blank">Website</a></li><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/blob/main/Mobile%20Development%20Portfolio/Mr.%20Accounting/Mr.%20Accounting/app-release.apk" target="_blank">App</a></li></ul>|
+|Chicken Wings Restaurant| <br> Since: 2022 <br> Independently developed an HTML website and Android app on my available time for a chicken wings restaurant, which allows users to order wings. Currently, the project is in its Phase 3.0 development stage.  <br> <br> | HTML/CSS, Javascript, Kotlin | ![Wingstop](https://github.com/RyufathSoepeno/MyPortfolio/assets/89006072/c6e72e78-2bf6-49ff-8c35-131a7f0213e6) | <ul><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/tree/main/Web%20Development%20Portfolio/The%20Eatery/The%20Eatery%204.0" target="_blank">Website</a></li><li><a href="https://github.com/RyufathSoepeno/MyPortfolio/blob/main/Mobile%20Development%20Portfolio/Chicken%20Wings%20App/Chicken%20Wings%20App%202.0/app-release.apk" target="_blank">App</a></li></ul>|
 
 2024: Coming Soon
 
