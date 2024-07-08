@@ -1,4 +1,4 @@
-# Budget Buddy Glossary
+# Read This!
 
 ## 1. protected:
 The protected keyword is an access modifier used for class members (fields, methods, and constructors). It indicates that the member is accessible within its own package and by subclasses (derived classes). Here's a brief overview:
