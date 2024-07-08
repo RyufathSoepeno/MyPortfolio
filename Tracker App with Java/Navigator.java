@@ -56,8 +56,13 @@ public class Navigator extends JFrame {
         // create the town panel and add it to the frame
         townPanel = new JPanel() {
             @Override
+            // The @Override annotation in Java indicates that a method is intended to override a method declared in a superclass
+            // If the method does not actually override a method from the superclass, the compiler will generate an error. This helps catch errors early in the development process
             protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
+                // Subclasses, even if they are in different packages, can access "protected" members. 
+                // However, access from a subclass outside the package is possible only through inheritance.
+                
+                super.paintComponent(g); // The super keyword in Java refers to the superclass (parent class) of the object
 
                 // draw the black background
                 g.setColor(Color.GRAY);
