@@ -8,7 +8,7 @@ Subclasses: Subclasses, even if they are in different packages, can access prote
 
 
 ## 2. Subclass:
-{
+//
 class Dog extends Animal {
     // Constructor
     Dog(String name) {
@@ -24,7 +24,7 @@ class Dog extends Animal {
 
 
 ## 3. Superclass:
-{
+//
 class Animal {
     // Field
     String name;
