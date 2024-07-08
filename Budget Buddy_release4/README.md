@@ -8,6 +8,7 @@ Subclasses: Subclasses, even if they are in different packages, can access prote
 
 
 ## 2. Subclass:
+```
 class Dog extends Animal {
     // Constructor
     Dog(String name) {
@@ -20,9 +21,10 @@ class Dog extends Animal {
         System.out.println("Bark");
     }
 }
-
+```
 
 ## 3. Superclass:
+```
 class Animal {
     // Field
     String name;
@@ -37,9 +39,9 @@ class Animal {
         System.out.println("Some generic animal sound");
     }
 }
-
+```
 =====================================
-
+```
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Animal("Generic Animal");
@@ -54,7 +56,7 @@ public class Main {
 
 -An instance of Animal is created and its makeSound() method is called.
 -An instance of Dog is created, demonstrating inheritance (it has the name field) and method overriding (it has a specific makeSound() implementation).
-
+```
 ======================================
 
 ## 4. Override
