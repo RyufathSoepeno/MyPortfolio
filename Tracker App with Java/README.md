@@ -41,7 +41,7 @@ class Animal {
 }
 ```
 =====================================
-
+```
 public class Main {
     public static void main(String[] args) {
         Animal myAnimal = new Animal("Generic Animal");
@@ -53,7 +53,7 @@ public class Main {
         System.out.println("My dog's name is " + myDog.name); // Output: My dog's name is Buddy
     }
 }
-
+```
 -An instance of Animal is created and its makeSound() method is called.
 -An instance of Dog is created, demonstrating inheritance (it has the name field) and method overriding (it has a specific makeSound() implementation).
 
