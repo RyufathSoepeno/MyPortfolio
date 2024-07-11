@@ -1,0 +1,26 @@
+import re
+
+def extract_frames(file_path):
+    with open(file_path, 'r') as file:
+        text = file.read()
+
+    # Define regular expressions for frame number, source and destination addresses, and frame type
+    frame_number_pattern = r'Frame (\d+):'
+    address_pattern = r'((?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2})'
+    frame_type_pattern = r'0x[0-9a-fA-F]+'
+
+    # Find all matches in the text
+    frame_numbers = re.findall(frame_number_pattern, text)
+    addresses = re.findall(address_pattern, text)
+    frame_types = re.findall(frame_type_pattern, text)
+
+    # Display the extracted information
+    for i, (frame_number, source_address, destination_address, frame_type) in enumerate(zip(frame_numbers, addresses[::2], addresses[1::2], frame_types), 1):
+        print(f"Frame {i}:")
+        print(f"  Frame Number: {frame_number}")
+        print(f"  Source Address: {source_address}")
+        print(f"  Destination Address: {destination_address}")
+        print(f"  Frame Type: {frame_type}\n")
+
+if __name__ == "__main__":
+    extract_frames("wireShark.txt")
