@@ -381,3 +381,20 @@ A property that specifies the action button on the keyboard, like "done," "next,
 
 ## 31. textCapitalization: 
 A property that controls how text is capitalized in a text field, like setting all caps or capitalizing each word.
+
+## 32. Hashtags
+
+1. ###: This format will display a number without leading zeros. For example:
+123 will be displayed as 123.
+45 will be displayed as 45.
+7 will be displayed as 7.
+
+2. #: This is a single-digit placeholder. If the number is zero, it will be displayed as an empty space. For example:
+123 will be displayed as 123.
+045 will be displayed as 45.
+007 will be displayed as 7.
+
+3. #, ###: This format includes a comma as a thousand separator -- Good for Rupiah Currency. For example:
+1234 will be displayed as 1,234.
+56789 will be displayed as 56,789.
+1234567 will be displayed as 1,234,567.
