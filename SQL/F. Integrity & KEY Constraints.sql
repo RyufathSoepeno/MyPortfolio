@@ -1,6 +1,10 @@
 CREATE DATABASE Constr;
 USE Constr;
 
+/** Primary Key: Unique identifier for each record in a table.
+Foreign Key: A link between records in different tables.
+Unique Key: Ensures no duplicate values in a specific field. */
+
 -- Create the Employees table
 CREATE TABLE Employees (
   employee_id INT PRIMARY KEY,
