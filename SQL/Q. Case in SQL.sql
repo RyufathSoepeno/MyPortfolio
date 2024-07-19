@@ -1,3 +1,6 @@
+CREATE DATABASE Casey;
+USE Casey;
+
 -- Create a table named 'Employees'
 CREATE TABLE Employees (
   employee_id INT PRIMARY KEY,
