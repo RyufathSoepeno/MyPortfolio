@@ -1,3 +1,7 @@
+CREATE DATABASE ZeroHour;
+USE ZeroHour;
+
+
 -- Create a table named 'Employees'
 CREATE TABLE Employees (
   employee_id INT PRIMARY KEY,
