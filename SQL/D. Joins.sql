@@ -70,6 +70,9 @@ FROM Orders
 LEFT JOIN Customers ON Orders.customer_id = Customers.customer_id;
 /** In a left join, all rows from the left table (Orders) are included, even if there are no matches in the right table (Customers). */
 
+
+
+
 -- Select all orders and customers using Full Join
 SELECT Orders.order_id, Customers.customer_name, Orders.order_date, Orders.total_amount
 FROM Orders
