@@ -8,6 +8,10 @@ using namespace std;
 
 /// For number 3: Evaluate GPA
 
+/// A pointer in programming is like an address that tells you where something is stored in the computer's memory. 
+/// Instead of holding the actual data, a pointer holds the memory location where the data is kept. 
+/// Think of it as a signpost that points to where you can find the information you need.
+
 float CourseAdministration::round(float var){
     value = (int)(var * 100 + .5);
     return (float)value / 100;
