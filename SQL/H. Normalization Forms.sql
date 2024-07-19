@@ -1,3 +1,6 @@
+CREATE DATABASE NewNormal;
+USE NewNormal;
+
 /** Let's consider a table Employees that stores information about employees in a company. 
 Each employee has a unique employee_id, and each department has a unique department_id. */
 
