@@ -41,6 +41,8 @@ INNER JOIN Customers ON Orders.customer_id = Customers.customer_id;
 /**In an inner join, only the rows that have matching values in both tables are included in the result set. 
 Here's what happens to the rows in an inner join:
 
+
+
 Matching Rows: When a row from the left table (specified before the INNER JOIN keyword) has a matching value in the right table 
 (specified after the INNER JOIN keyword) based on the join condition, that row is included in the result set.
 
@@ -50,11 +52,17 @@ These non-matching rows are not considered in the join and are not included in t
 Basically, they are the defaults of all joins
 */
 
+
+
+
 -- Select all customers and their orders using Right Join
 SELECT Orders.order_id, Customers.customer_name, Orders.order_date, Orders.total_amount
 FROM Orders
 RIGHT JOIN Customers ON Orders.customer_id = Customers.customer_id;
 /** In a right join, all rows from the right table (Customers) are included, even if there are no matches in the left table (Orders). */
+
+
+
 
 -- Select all orders and their customers using Left Join
 SELECT Orders.order_id, Customers.customer_name, Orders.order_date, Orders.total_amount
