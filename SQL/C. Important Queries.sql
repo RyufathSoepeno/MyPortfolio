@@ -1,3 +1,6 @@
+CREATE DATABASE Tips;
+USE Tips;
+
 -- Create the Student table
 CREATE TABLE Student (
   SID INT UNSIGNED NOT NULL,
