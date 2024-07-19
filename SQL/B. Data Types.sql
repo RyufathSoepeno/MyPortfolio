@@ -1,3 +1,6 @@
+CREATE DATABASE DataTypes;
+USE DataTypes;
+
 CREATE TABLE products (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, /** It is also unsigned (UNSIGNED), meaning it only accepts positive values. */
     name VARCHAR(50) NOT NULL, /** NOT NULL means it must have a value */
