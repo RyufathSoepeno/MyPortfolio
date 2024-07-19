@@ -1,6 +1,8 @@
 CREATE DATABASE Storage;
 USE Storage;
 
+/** A cursor in SQL is like a pointer that allows you to go through a set of data rows one at a time. Imagine it as a bookmark in a book that helps you keep track of where you are, so you can process each row individually in a sequence, especially useful when you need to perform operations on each row of a large result set one at a time */
+
 -- Create the Employees table
 CREATE TABLE Employees (
   employee_id INT PRIMARY KEY,
