@@ -33,7 +33,7 @@ header {
   font-size: 28px;
   position: relative;
   left: 20px;
-  margin-right: 15px;
+  /* margin-right: 15px; <-- This will prevent it from being aligned to the left, and will the "left" element will move away according to margin-right, not default*/
 }
 
 /* Navigation styles */
