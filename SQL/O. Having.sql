@@ -1,3 +1,6 @@
+CREATE DATABASE HaveHad;
+USE HaveHad;
+
 -- Create a table named 'Orders'
 CREATE TABLE Orders (
   order_id INT PRIMARY KEY,
