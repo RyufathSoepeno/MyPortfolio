@@ -1,3 +1,6 @@
+CREATE DATABASE iNTRO;
+USE iNTRO;
+
 CREATE TABLE employees (
     id INT PRIMARY KEY,
     name VARCHAR(50),
