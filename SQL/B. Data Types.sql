@@ -19,7 +19,7 @@ SELECT * FROM products;
 SELECT name, price FROM products WHERE quantity > 5;
 
 SELECT CAST(price AS UNSIGNED) AS integer_price FROM products; /** Selecting an integer with decimal values */
-/** This query uses the CAST function to convert the "price" column to an unsigned integer, effectively truncating any decimal values. 
+/** This query uses the CAST() function to convert the "price" column to an unsigned integer, effectively truncating any decimal values. 
 The result is returned as "integer_price". */
 
 
