@@ -1,3 +1,7 @@
+CREATE DATABASE Checker;
+USE Checker;
+
+
 -- Create a table named 'Products'
 CREATE TABLE Products (
   product_id INT PRIMARY KEY,
