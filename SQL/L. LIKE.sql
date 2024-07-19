@@ -1,3 +1,6 @@
+CREATE DATABASE Liking;
+USE Liking;
+
 -- Create a table named 'Customers'
 CREATE TABLE Customers (
   customer_id INT PRIMARY KEY,
