@@ -1,3 +1,6 @@
+CREATE DATABASE Storage;
+USE Storage;
+
 /** Stored procedures are useful for encapsulating and reusing SQL logic and can be more complex than this example. 
 They help maintain and manage database operations efficiently. */
 
