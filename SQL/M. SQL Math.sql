@@ -1,3 +1,7 @@
+CREATE DATABASE Arithmetic;
+USE Arithmetic;
+
+
 -- Create a table named 'Orders'
 CREATE TABLE Orders (
   order_id INT PRIMARY KEY,
