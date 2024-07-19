@@ -1,3 +1,6 @@
+CREATE DATABASE Viewing;
+USE Viewing;
+
 -- Create the Products table
 CREATE TABLE Products (
   product_id INT PRIMARY KEY,
