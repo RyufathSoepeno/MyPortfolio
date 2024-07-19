@@ -6,7 +6,7 @@ CREATE TABLE products (
     name VARCHAR(50) NOT NULL, /** NOT NULL means it must have a value */
     quantity INT DEFAULT 0, /** has a default value of 0 */
     price DECIMAL(10, 2) UNSIGNED,
-    is_available TINYINT(1) DEFAULT 1 /** Boolean, a default value of 1 */
+    is_available TINYINT(1) DEFAULT 1 /** Boolean, a default value of 1 -- hence tinyint since it only accepts 1 and 0 as minimum value */
 );
 
 INSERT INTO products (name, quantity, price)
