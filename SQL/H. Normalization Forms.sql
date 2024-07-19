@@ -8,6 +8,9 @@ Each employee has a unique employee_id, and each department has a unique departm
 Each marble has a unique pattern, but some patterns might repeat. 
 You want to make sure you can find any marble easily without digging through the whole box.
 
+In simple terms, a dependency in SQL refers to a situation where one piece of data or one operation relies on another piece of data or operation. For example, if a table column needs to refer to a value in another table to ensure data consistency, this creates a dependency. 
+Essentially, it means that some parts of the database cannot function correctly or be updated independently without considering others.
+
 Normalization in a database is like sorting those marbles. 
 It's a process where you organize information in a way that reduces messiness and repetition. 
 You break down information into smaller parts and arrange them in a logical order. 
