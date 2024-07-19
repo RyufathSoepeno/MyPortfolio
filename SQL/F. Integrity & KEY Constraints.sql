@@ -1,7 +1,7 @@
 CREATE DATABASE Constr;
 USE Constr;
 
-/** Primary Key: Unique identifier for each record in a table.
+/** Primary Key: Unique identifier (Unique ID number therefore cannot be taken) for each record in a table.
 Foreign Key: A link between records in different tables.
 Unique Key: Ensures no duplicate values in a specific field. */
 
