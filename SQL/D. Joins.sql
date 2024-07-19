@@ -1,3 +1,7 @@
+CREATE DATABASE Joined;
+USE Joined;
+
+
 -- Create the Customers table
 CREATE TABLE Customers (
   customer_id INT PRIMARY KEY,
