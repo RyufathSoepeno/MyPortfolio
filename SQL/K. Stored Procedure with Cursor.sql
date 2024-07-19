@@ -1,3 +1,6 @@
+CREATE DATABASE Storage;
+USE Storage;
+
 -- Create the Employees table
 CREATE TABLE Employees (
   employee_id INT PRIMARY KEY,
