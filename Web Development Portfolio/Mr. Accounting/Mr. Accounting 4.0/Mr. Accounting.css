@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0047AB;
+  color: white;
+  padding: 30px;
+  margin-right: -30px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo h1 {
+  font-family: Garamond, serif;
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/* History section styles */
+#historySection {
+  margin-left: auto;
+}
+
+#historySection h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#historyList li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+section {
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+footer {
+  background-color: #0047AB;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Calendar</title>
+  <link rel="stylesheet" href="Mr. Accounting.css">
+  <!-- FullCalendar CSS -->
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Mr. Accounting</h1>
+    </div>
+    <section id="historySection">
+      <h2 onclick="goToPage('index.html')" class="underline">Home</h2>
+    </section>
+  </header>
+
+  <section>
+    <h2>Transaction Calendar</h2>
+    <div id='calendar'></div>
+  </section>
+  
+  <footer>
+    <p>All rights reserved.</p>
+  </footer>
+  
+  <!-- FullCalendar JS -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+  <script src="Mr. Accounting.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+          // Example events, replace with dynamic data as needed
+          {
+            title: 'Credit Transaction',
+            start: '2024-07-01',
+            description: 'Credit: $100'
+          },
+          {
+            title: 'Debit Transaction',
+            start: '2024-07-02',
+            description: 'Debit: $50'
+          }
+        ],
+        eventClick: function(info) {
+          alert(info.event.title + ": " + info.event.extendedProps.description);
+        }
+      });
+
+      calendar.render();
+    });
+	
+	document.addEventListener('DOMContentLoaded', function() {
+	var calendarEl = document.getElementById('calendar');
+
+	var calendar = new FullCalendar.Calendar(calendarEl, {
+		initialView: 'dayGridMonth',
+		events: formatEvents(),
+		eventClick: function(info) {
+		  alert(info.event.title + ": " + info.event.extendedProps.description);
+		}
+	  });
+
+	  calendar.render();
+	});
+
+  </script>
+</body>
+</html>
