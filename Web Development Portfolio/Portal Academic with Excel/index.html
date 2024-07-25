@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Portal</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script> <!-- you need to include the xlsx library in your HTML file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Course Portal</h1>
+        <table id="coursesTable">
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="coursesBody">
+                <!-- Course rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div class="form">
+            <h2>Add a New Course</h2>
+            <input type="text" id="courseName" placeholder="Course Name" required>
+            <input type="text" id="courseDescription" placeholder="Course Description" required>
+            <button onclick="addCourse()">Add Course</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
