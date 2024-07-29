@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 $sql = "SELECT patient_id, full_name, date_of_birth, birth_place, gender, CONCAT(telephone_code, ' ', telephone_number) AS telephone, email FROM patients ORDER BY patient_id ASC";
 $result = $conn->query($sql);
 
-$patients = array();
+$patients = array(); // Arrays are important for dealing with tables and databases
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $patients[] = $row;
