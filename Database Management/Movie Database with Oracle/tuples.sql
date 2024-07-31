@@ -1,3 +1,68 @@
+-- ============================================================
+--   Database name:  ORACLE.CS.ARIZONA.EDU                                  
+--   DBMS name:      ORACLE Version 11g                          
+--   Last modified on:     1/23/2013                         
+-- ============================================================
+
+-- ============================================================
+--   Table: MOVIE                                              
+-- ============================================================
+create table MOVIE
+(
+    MOVIEID INTEGER                not null,
+    TITLE   VARCHAR(70)           not null,
+    YEAR    NUMBER(4)              not null,
+    SCORE   FLOAT                  null    ,
+    VOTES   INTEGER                null    ,
+    constraint PK_MOVIE primary key (MOVIEID)
+)
+/
+
+-- ============================================================
+--   Table: ACTOR                                              
+-- ============================================================
+create table ACTOR
+(
+    ACTORID INTEGER                not null,
+    NAME    VARCHAR2(35)           not null,
+    constraint PK_ACTOR primary key (ACTORID)
+)
+/
+
+-- ============================================================
+--   Table: CASTING                                            
+-- ============================================================
+create table CASTING
+(
+    MOVIEID  INTEGER                not null,
+    ACTORID  INTEGER                not null,
+    ORDINAL  INTEGER                null    ,
+    constraint PK_CASTING primary key (MOVIEID, ACTORID)
+)
+/
+
+-- ============================================================
+--   Index: APPEARS_IN_FK                                      
+-- ============================================================
+create index APPEARS_IN_FK on CASTING (MOVIEID asc)
+/
+
+-- ============================================================
+--   Index: STARS_FK                                           
+-- ============================================================
+create index STARS_FK on CASTING (ACTORID asc)
+/
+
+alter table CASTING
+    add constraint FK_CASTING_APPEARS_IN_MOVIE foreign key  (MOVIEID)
+       references MOVIE (MOVIEID)
+/
+
+alter table CASTING
+    add constraint FK_CASTING_STARS_ACTOR foreign key  (ACTORID)
+       references ACTOR (ACTORID)
+/
+
 INSERT INTO MOVIE VALUES (1,'Star Wars',1977,8.9,14182);
 INSERT INTO MOVIE VALUES (2,'Pulp Fiction',1994,8.4,11693);
 INSERT INTO MOVIE VALUES (3,'Blade Runner',1982,8.6,8665);
@@ -140,7 +205,7 @@ INSERT INTO ACTOR VALUES (5535,'Maia Brewton');
 INSERT INTO ACTOR VALUES (4725,'Julie Araskog');
 INSERT INTO ACTOR VALUES (4482,'John Qualen');
 INSERT INTO ACTOR VALUES (3915,'Jeannie Linero');
-INSERT INTO ACTOR VALUES (6508,'Obba Babatund‰');
+INSERT INTO ACTOR VALUES (6508,'Obba BabatundÂ‰');
 INSERT INTO ACTOR VALUES (4483,'John R. Woodward');
 INSERT INTO ACTOR VALUES (3754,'James Rebhorn');
 INSERT INTO ACTOR VALUES (7076,'Randy Oglesby');
@@ -473,7 +538,7 @@ INSERT INTO ACTOR VALUES (7592,'Rohn Thomas');
 INSERT INTO ACTOR VALUES (5892,'Max Elliott Slade');
 INSERT INTO ACTOR VALUES (7756,'Sachi Parker');
 INSERT INTO ACTOR VALUES (7676,'Ross Bagley');
-INSERT INTO ACTOR VALUES (5894,'Max Grod‰nchik');
+INSERT INTO ACTOR VALUES (5894,'Max GrodÂ‰nchik');
 INSERT INTO ACTOR VALUES (984,'Brian Brophy');
 INSERT INTO ACTOR VALUES (2111,'Diane Baker');
 INSERT INTO ACTOR VALUES (1222,'Carrie Fisher');
@@ -725,7 +790,7 @@ INSERT INTO ACTOR VALUES (4418,'John Kavanagh');
 INSERT INTO ACTOR VALUES (2718,'Franco Citti');
 INSERT INTO ACTOR VALUES (2475,'Eleanor Clift');
 INSERT INTO ACTOR VALUES (3285,'Harry Dean Stanton');
-INSERT INTO ACTOR VALUES (3528,'J’rgen Prochnow');
+INSERT INTO ACTOR VALUES (3528,'JÂ’rgen Prochnow');
 INSERT INTO ACTOR VALUES (3609,'Jack Purvis');
 INSERT INTO ACTOR VALUES (5067,'Kristin Scott Thomas');
 INSERT INTO ACTOR VALUES (2557,'Ennalls Berl');
@@ -848,7 +913,7 @@ INSERT INTO ACTOR VALUES (3804,'Jane Jenkins');
 INSERT INTO ACTOR VALUES (5181,'Lawrence Bender');
 INSERT INTO ACTOR VALUES (3563,'Jack  McKenzie (I)');
 INSERT INTO ACTOR VALUES (4373,'John Enos');
-INSERT INTO ACTOR VALUES (1782,'Dant‰ McCarthy');
+INSERT INTO ACTOR VALUES (1782,'DantÂ‰ McCarthy');
 INSERT INTO ACTOR VALUES (3564,'Jack  Moore (IV)');
 INSERT INTO ACTOR VALUES (2917,'Gates McFadden');
 INSERT INTO ACTOR VALUES (3727,'James Kisicki');
@@ -865,17 +930,17 @@ INSERT INTO ACTOR VALUES (515,'Arnold Schwarzenegger');
 INSERT INTO ACTOR VALUES (355,'Angus MacInnes');
 INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (8036,910,7);
 INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (8036,39,7);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,1,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,2,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,4,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,5,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,6,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,7,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,8,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,16,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,39,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,263,1);
---INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,746,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,1,1); -> Are these supposed to be commented?
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,2,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,4,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,5,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,6,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,7,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,8,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,16,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,39,1);
+--  INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,263,1);
+-- INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,746,1);
 INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,16,1);
 INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,39,1);
 INSERT INTO CASTING(ACTORID,MOVIEID,ORDINAL) VALUES (515,48,1);
