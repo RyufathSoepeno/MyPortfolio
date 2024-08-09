@@ -4,6 +4,8 @@ USE OneAndMany;
 ------- In a nutshell, basically these relationships is defined by how you name or want your data to be, 
 ------- so if you put more than one data for a column, then it will be classified as "many" not "one" anymore, that simple :)
 
+------- The Foreign Key makes it "Many", not "One" anymore
+
 ------- This applies to all except Many-to-Many
 
 --- One-to-One Relationship
