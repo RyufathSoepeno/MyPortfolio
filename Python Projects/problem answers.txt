@@ -1,0 +1,81 @@
+Name: Ryufath Alief Adhyaksa Putera Soepeno
+UA ID: 23792097
+Course Computational Thinking & Doing
+4/25/2024
+
+
+
+Note: I am using gitbash to solve both sections 1 and 2
+
+1.1 What do the following commands do?
+You can use command “man” to check the command description.
+cd ps ps -u $(whoami)
+kill
+
+Answer: It will print out this result shown in quote
+“Line1: cd: too many arguments
+Kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec … or kill -l [sigspec]”
+
+Supposedly, “ps” lists the currently running processes, but supposedly because we used it twice, the “cd” in gitbash will believe it consisted of too many arguments
+
+And "kill" sends the message to terminate the entire process, as outputted above
+
+
+
+
+
+
+1.2 What does the following script do?
+myvar=0
+	while [ $myvar -le 10 ]
+	do
+		echo $myvar
+		myvar=$(( $myvar + 1 ))
+	done
+
+
+Answer: It will print out this result
+0 + 1
+1 + 1
+2 + 1
+3 + 1
+4 + 1
+5 + 1
+6 + 1
+7 + 1
+8 + 1
+9 + 1
+10 + 1
+
+This is because it is producing an iteration loop in increment, starting with myvar's value of 0, until the value is greater than 10 
+
+
+
+
+
+
+1.3 What does the following script do?
+for myfile in ../?????? do
+	if [ -d "$myfile" ]
+	then echo "$myfile (dir)"
+	else echo "$myfile"
+	fi done
+
+
+Answer:  First, before we get to the supposed answer, it would print out a syntax error. 
+
+The code should have been written like this if the correct answer was not an error:
+for myfile in ../??????; do
+    if [ -d "$myfile" ]; then
+        echo "$myfile (dir)"
+    else
+        echo "$myfile"
+    fi
+done
+
+
+Moving on, if the expected answer in not an error, and if we followed the code I have fixed, this would be printed out 
+“../Public (dir)”
+
+It correctly corresponds to the if statement. 
+The script iterates through directories in the parent directory using a wildcard pattern "../??????", where "?" represents any single character. It checks each directory found using the "-d" test in the if statement. In the given result, it prints "../Public (dir)" because it found a directory in my gitbash named "Public" in my parent directory.
