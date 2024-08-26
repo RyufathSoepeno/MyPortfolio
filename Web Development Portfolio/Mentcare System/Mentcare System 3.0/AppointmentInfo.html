@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <style>
+        /* General styles for the entire page */
+        html {
+            background-color: white;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: center;
+            justify-content: flex-end;
+            color: white;
+            align-items: center;
+            text-align: center;
+            background-color: #14d8a7;
+            z-index: 1000; /* Ensure the header is on top of other elements */
+            position: fixed;
+            font-size: 14px;
+            padding: 20px 10px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation styles */
+        .nav__links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav__links li {
+            margin-right: 20px;
+            position: relative; /* Needed for the dropdown */
+        }
+
+        .nav__links li a {
+            font-weight: bold;
+            color: white; /* Header text color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav__links li a:hover {
+            color: #0b9e82;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #4D4D4F;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0b9e82;
+            color: white;
+        }
+
+        .nav__links li:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Home button image styles */
+        .Home {
+            width: 3%;
+            height: 3%;
+            position: fixed;
+            top: 17px;
+            left: 6px;
+        }
+
+        /* Main content styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #14d8a7;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #14d8a7;
+            padding-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .buttoning input[type="submit"] {
+            background-color: #14d8a7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttoning input[type="submit"]:hover {
+            background-color: #0b9e82;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #14d8a7;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="Home" src="237-2378542_icon-symbol-gui-house-home-start-top-check-removebg-preview.png" alt="Home">
+        </a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li>
+                    <a href="#">Patient Management</a>
+                    <div class="dropdown-content">
+                        <a href="AddNewPatient.html">Add New Patient</a>
+                        <a href="http://localhost/php-projects/Patient.php">Patients List</a>
+                    </div>
+                </li>
+                <li><a href="#">Appointments</a>
+                    <div class="dropdown-content">
+                        <a href="http://localhost/php-projects/AddAppointment.php">Add Appointment</a>
+                        <a href="http://localhost/php-projects/Appointments.html">Calendar</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Medication Management</a>
+                    <div class="dropdown-content">
+                        <a href="AddMedication.html">Add Medication</a>
+                        <a href="http://localhost/php-projects/medication.php">Medication List</a>
+                        <a href="http://localhost/php-projects/AssignMedication.php">Assign Medication</a>
+                    </div>
+                </li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="UserGuide.html">User Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Event Form</h1>
+        
+        <div>
+            <label>Name:</label>
+            <span id="name"></span>
+        </div>
+    
+        <div>
+            <label>Date and Time:</label>
+            <span id="dob"></span>
+        </div>
+    
+        <div>
+            <label>Description:</label>
+            <span id="desc"></span>
+        </div>
+    
+        <div>
+            <label>Appointment Type:</label>
+            <span id="typey"></span><br><br>
+        </div>
+    
+        <div class="buttoning">
+            <form action="EditAppointment.html" method="POST">
+                <input type="hidden" id="appointmentId" name="appointmentId"> <!-- Hidden field for ID -->
+                <input type="hidden" id="actionType" name="actionType" value="edit"> <!-- Indicate edit action -->
+                <input type="submit" value="Reschedule">
+            </form>
+            <!-- <input type="submit" value="Submit"> -->
+        </div>
+    </div>
+    
+    <footer>
+        <p>All Rights Reserved (c)</p>
+    </footer>
+    
+    <script>
+        // Get query parameters
+        const urlParams = new URLSearchParams(window.location.search); 
+        const id = urlParams.get('id'); // Get the appointment ID if available
+        const name = urlParams.get('name');
+        const dob = urlParams.get('dob');
+        const desc = urlParams.get('desc');
+        const typer = urlParams.get('typey');
+
+    
+        // Update text labels with event data
+        if (id) document.getElementById('appointmentId').value = id;
+        if (name) document.getElementById('name').textContent = name;
+        if (dob) document.getElementById('dob').textContent = new Date(dob).toLocaleString();
+        if (desc) document.getElementById('desc').textContent = desc;
+        if (typer) document.getElementById('typey').textContent = typer;
+    </script>
+    
+    <footer>
+        <p>&copy; All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

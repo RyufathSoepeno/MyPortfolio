@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <meta name="author" content="Ryufath">
+    <meta name="description" content="For All Your Mental Care Needs">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* General styles for the entire page */
+        html {
+            background-color: white;
+            color:black;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: center;
+            justify-content: flex-end;
+            color: white;
+            align-items: center;
+            text-align: center;
+            background-color: #14d8a7;
+            position: fixed;
+            font-size: 14px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-right: 20%;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        .TitleHeader{
+            font-style: bold;
+            display: flex;
+            justify-content: left;
+
+        }
+
+        footer{
+            padding:10px;
+            size:5px;
+            position: fixed;
+            bottom: 0;
+            background-color: #14d8a7;
+            color:white;
+            width:100%;
+            text-align: left;
+        }
+
+        
+        /* Navigation styles */
+        .nav__links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__links li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative; /* Needed for the dropdown */
+        }
+
+        .nav__links li a {
+            font-weight: bold;
+            color: white; /* Header text color*/
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav__links li a:hover {
+            color: #ffff4d;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #4D4D4F;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffff4d;
+            color: black;
+        }
+
+        .nav__links li:hover .dropdown-content {
+            display: block;
+        }
+
+        .Home {
+            width: 3%;
+            height: 3%;
+            position: fixed;
+            top: 32px;
+            left: 6px;
+        }
+
+        .Main{
+            margin-top: 120px; /* distance from header*/
+        }
+
+        .TitleHeader{
+            font-weight:bolder; /* To bolx text */
+            font-size:25px;
+        }
+
+        .BodyHeader{
+            margin-top:-10px; /* Margin from top */
+            margin-bottom:50px;
+            border-bottom:1px solid black;
+            padding-bottom:50px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <a href="index.html">
+            <img class="Home" src="237-2378542_icon-symbol-gui-house-home-start-top-check-removebg-preview.png">
+        </a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li>
+                    <a href="#">Patient Management</a>
+                    <div class="dropdown-content">
+                        <a href="AddNewPatient.html">Add New Patient</a>
+                        <a href="http://localhost/php-projects/Patient.php">Patients List</a>
+                    </div>
+                </li>
+                <li><a href="#">Appointments</a>
+                <div class="dropdown-content">
+                    <a href="http://localhost/php-projects/AddAppointment.php">Add Appointment</a>
+                    <a href="http://localhost/php-projects/Appointments.html">Calendar</a>
+                </div>
+                 </li>
+                <li><a href="#">Medication Management</a>
+                    <div class="dropdown-content">
+                        <a href="AddMedication.html">Add Medication</a>
+                        <a href="http://localhost/php-projects/medication.php">Medication List</a>
+                        <a href="http://localhost/php-projects/AssignMedication.php">Assign Medication</a>
+                    </div>
+                </li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="UserGuide.html">User Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Main">
+
+        <p class="TitleHeader">Who are we?</p>
+        <p class="BodyHeader"> We are a collaborative team of IT experts with a dream of creating systems and solutions for mental healthcare systems in Indonesia. Today, we have build systems for over 80+ hospitals.</p>
+        <p class="TitleHeader">Our Mission</p>
+        <ul class="BodyHeader">
+            <li>To create and foster a seamless, reliable, and responsive mental care systems in Indonesia</li>
+            <li>To provide an affordable and outreaching solutions for all mental hospital systems in Indonesia</li>
+            <li>To campaign for healthcare causes in Indonesia</li>
+        </ul>
+        <p class="TitleHeader">Our History</p>
+        <p class="BodyHeader"> Our Company was started by John Doe in 12th December 2012. After John Doe graduated medical school, he immediately went on pursuing in creating a mental healthcare system solutions. Our first healthcare solution was implemented on Indo Hospital in 2013.</p>
+    </div>
+
+    <footer>
+        <p>&copy; All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
