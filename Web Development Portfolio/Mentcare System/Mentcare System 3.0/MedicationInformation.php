@@ -184,7 +184,7 @@
         // Database connection
         $servername = "localhost";
         $username = "root";
-        $password = "kkkkta";
+        $password = "";
         $dbname = "MentcareDB";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
