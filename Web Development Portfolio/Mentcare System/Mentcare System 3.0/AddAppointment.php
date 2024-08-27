@@ -204,7 +204,7 @@
                 // PHP code to fetch patient names from the database
                 $servername = "localhost";
                 $username = "root";
-                $password = "kkkkta";
+                $password = "";
                 $dbname = "MentcareDB";
 
                 // Create connection
