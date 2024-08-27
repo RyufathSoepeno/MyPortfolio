@@ -209,7 +209,7 @@
         // Database connection details
         $servername = "localhost";
         $username = "root";
-        $password = "kkkkta";
+        $password = "";
         $dbname = "MentcareDB";
 
         // Create connection
