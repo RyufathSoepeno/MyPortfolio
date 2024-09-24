@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_description">to continue using this Android app</string>
+</resources>
