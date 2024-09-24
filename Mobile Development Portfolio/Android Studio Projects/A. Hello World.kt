@@ -1,6 +1,6 @@
-// Rename it as MainActivity.kt
-
 class MainActivity : ComponentActivity() {
+
+ // Rename it as MainActivity.kt
  override fun onCreate(savedInstanceState: Bundle?) {
  super.onCreate(savedInstanceState)
  setContent {
