@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+- A New Resource Directory window open, in Resource type, choose Layout, and then click OK button.
+
+- LinearLayout must be on a "layout" folder, sometimes it is not shown in the res file
+- Rename it as activity_main.xml
+-->
+
+<!-- LinearLayout is a layout that arranges its child elements in a linear direction,
+either vertically or horizontally. In this case, it is vertical (android:orientation="vertical").
+
+android
+="match_parent": The layout should take up the full width of the parent container.
+android
+="match_parent": The layout should take up the full height of the parent container.
+Padding attributes (android:paddingLeft, android:paddingTop, android:paddingRight,
+android:paddingBottom) define the space (15dp) around the content inside the layout. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp">
+
+
+    <!-- TextView is used to display a block of text.
+
+    android
+    ="match_parent": The width of the text view matches the width of the parent container.
+    android
+    ="wrap_content": The height is only as large as necessary to fit the content (text).
+    android
+    ="Text Line 1": This sets the text displayed to "Text Line 1".
+    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 2" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 3" />
+
+    <!--
+    CheckBox is a user interface element that allows the user to select or deselect an option.
+
+    android
+    ="@+id/checkBox": Assigns a unique ID to the checkbox, so it can be referenced programmatically.
+    android
+    ="match_parent": The checkbox takes the full width of the parent container.
+    android
+    ="wrap_content": The height adjusts to fit the content.
+    android
+    ="Check Box 1": This sets the label text next to the checkbox to "Check Box 1".
+    -->
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Box 1" />
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Box 2" />
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Box 2" />
+
+
+    <!-- RadioGroup is a container for RadioButton elements.
+    It ensures that only one radio button in the group can be selected at a time.
+
+    android
+    ="match_parent": The group takes up the full width of the parent container.
+    android
+    ="wrap_content": The height adjusts to fit the content. -->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+        RadioButton allows the user to select one option from a group of choices.
+
+        android
+        ="@+id/radioButton": Assigns a unique ID to this radio button.
+        android
+        ="match_parent": The button takes the full width of the parent container.
+        android
+        ="wrap_content": The height adjusts to fit the content.
+        android
+        ="Radio Button 1": This sets the label text next to the radio button to "Radio Button 1".
+        -->
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio Button 1" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio Button 2" />
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radio Button 3" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>
