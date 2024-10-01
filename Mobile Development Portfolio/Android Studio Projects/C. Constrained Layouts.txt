@@ -1,0 +1,86 @@
+1. Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+4. Change application name into ConstraintLayout
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+ 11. A New Resource Directory window open, in Resource type, choose Layout, and then click OK
+ button.
+ 12. New folder layout will appear under the Res folder.
+ 13. On the layout folder, right click and then choose New | Layout Resource File.
+ 14. A New Resource File window open, in File name, type activity_main.xml, and then click OK
+ button.
+ 15. Open MainActivity.kt, and then update the code into:
+ package com.example.basiclayout
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ class MainActivity : ComponentActivity() {
+ override fun onCreate(savedInstanceState: Bundle?) {
+ super.onCreate(savedInstanceState)
+ setContent {
+ setContentView(R.layout.activity_main)
+ }
+ }
+ }
+ 16. The activity_main.xml then open, click Design button.
+ 17. On Component Tree, select LinearLayout (vertical), right click choose Convert LinearLayout
+ to ConstrainLayout.
+ 18. A Convert to ConstrainLayout window will appear, click OK button.
+ 19. Check the conversion by seeing the Code, then back to Design mode.
+
+ 20. Drag TextView from Palette to Component Tree
+ 21. On Constraint Widget, set 32 from above and 32 from left
+ 22. TextView will change its position.
+ 23. On Project tab upper left find and open file string.xml in app | res | values folder.
+ 24. On code below:
+ <resources>
+ <string name="app_name">ConstraintLayout</string>
+ </resources>
+ insert new <string> below under app_name on line 3:
+ <string name="sign_in">Sign In</string>
+ 25. Back to activity_main.xml file, choose Text tab to see the code.
+ 26. Find code below:
+ <TextView
+ android:id="@+id/textView"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_marginStart="32dp"
+ android:layout_marginTop="32dp"
+ android:text="TextView"
+ app:layout_constraintStart_toStartOf="parent"
+ app:layout_constraintTop_toTopOf="parent" />
+ and update android:text part into:
+ android:text="@string/sign_in"
+ 27. See result update back on Design tab.
+ 28. Add new TextView, drag TextView from Palette to Component Tree
+ 29. Click Up side of new TextView and connect with Bottom side Sign In TextView
+ 30. On Constraint Widget, set 0 from above and 32 from left
+ 31. On Project tab upper left choose strings.xml
+ 32. On code below:
+ <resources>
+ <string name="app_name">ConstraintLayout</string>
+ <string name="sign_in">Sign In</string>
+ </resources>
+ insert new <string> under sign_in on line 4:
+ <string name="sign_in_description">to continue using this Android app</string>
+ 33. Back to activity_main.xml file, choose Code tab to see the code.
+ 34. Find code below:
+ <TextView
+ android:id="@+id/textView2"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:layout_marginStart="32dp"
+ android:text="TextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+ and update android:text part into:
+ android:text="@string/sign_in_description"
+
+ 35. Result will appear on Design tab.
+ 36. Go to File and Save All
+ 37. Run on a generated AVD.
