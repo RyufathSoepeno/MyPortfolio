@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ScrollView</string>
+    <string name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium, magn
+    a ac varius tincidunt, sapien nunc porttitor ligula, in lobortis orci nulla quis lectus. Nullam nec n
+    isl cursus, sollicitudin lacus facilisis, finibus sapien. Nullam nunc ante, aliquet vel euismod vita
+    e, bibendum vel justo. Vestibulum interdum egestas risus, ut sollicitudin urna iaculis a. Vivamus ves
+        tibulum, nunc in sollicitudin faucibus, metus neque elementum magna, quis varius purus augue at augu e.
+        Donec maximus scelerisque risus id pulvinar. Sed dapibus metus ligula, non faucibus ante eleifend
+    vel. Suspendisse a augue quam. In malesuada purus ac nisi dapibus, non suscipit sem viverra. Curabitu
+     r a aliquam ipsum. Proin gravida porttitor risus, at finibus quam interdum in. Fusce facilisis lobort
+     is nisl, ac laoreet turpis molestie a. Vestibulum mollis ut sapien eget rhoncus. Morbi at orci sit am
+     et urna finibus suscipit.
+     Phasellus ut enim mauris. Etiam pharetra lobortis tortor nec iaculis. In eget massa quis lacus fringi
+     lla ornare vel sed libero. Morbi tincidunt pulvinar ultricies. Nullam dignissim faucibus mattis. Vest
+     ibulum ullamcorper, arcu a pellentesque imperdiet, nibh magna condimentum orci, nec rutrum nisl lectu
+     s ac erat. Aenean efficitur eu nisi a sollicitudin. Curabitur lobortis finibus cursus. Quisque sodale
+     s laoreet lacus, sed molestie lorem ullamcorper ut. Cras quam ex, iaculis nec velit at, commodo luctu
+     s justo. Nulla nec nibh sit amet velit tristique maximus eu non velit. Proin suscipit risus vitae con
+     vallis blandit. Nullam dignissim augue urna, a vehicula leo condimentum non. Vestibulum id varius du
+     i. In fermentum non urna eget convallis. Curabitur sit amet placerat diam.
+     Ut tempus lacinia magna vel tempus. Nulla semper, ante vitae venenatis volutpat, ipsum dui viverra ma
+     uris, vel interdum mi elit a magna. Maecenas blandit erat ut nibh pharetra, non gravida libero pharet
+     ra. Praesent tristique tincidunt tincidunt. Donec ac risus rutrum, egestas justo at, dictum leo. Susp
+     endisse varius, arcu non pulvinar egestas, turpis elit elementum quam, vitae convallis turpis ante a
+    erat. Praesent et leo ut magna aliquet mollis eget nec massa. Nunc turpis nunc, gravida sed leo quis,
+    eleifend bibendum mauris. Aliquam erat volutpat. Phasellus a dui diam.
+     Nulla vitae ante tincidunt, pharetra ante in, volutpat ex. In ac massa libero. Nunc imperdiet diam ac
+    nibh blandit, pulvinar ornare diam fringilla. Ut ultrices bibendum augue, sit amet efficitur dui tinc
+     idunt sit amet. Nullam ut erat ultricies, facilisis turpis at, malesuada sapien. Etiam imperdiet cons
+     ectetur dui sed fermentum. Ut sit amet neque vestibulum, rhoncus tellus sit amet, sagittis magna.
+     Duis facilisis nunc velit. Etiam semper tempor vehicula. Integer quis ultrices risus, in vulputate nu
+     lla. Aliquam eu efficitur elit. Duis tincidunt arcu sit amet lorem mollis, at laoreet purus euismod.
+    Sed eu mattis elit, nec fringilla eros. Maecenas sagittis lorem arcu, eget aliquam eros dapibus a. Qu
+     isque nec arcu interdum, vehicula lacus eu, imperdiet quam. Phasellus tincidunt auctor nulla. Sed sce
+     lerisque egestas dui, sed elementum quam laoreet ultricies. Integer pellentesque nisi ut tortor bland
+     it pretium. Proin vitae maximus dui. Nullam semper, sem a lobortis vulputate, dolor eros sollicitudin
+    lectus, et maximus ex dolor eu felis. Donec ullamcorper metus quam, sit amet facilisis velit congue e
+     t. Duis sit amet metus mattis, convallis nibh at, tempor enim. Suspendisse nec enim a lorem condiment
+     um venenatis.</string>
+</resources>
