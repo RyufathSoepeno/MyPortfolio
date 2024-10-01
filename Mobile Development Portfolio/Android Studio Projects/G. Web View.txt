@@ -1,0 +1,50 @@
+ 1. Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+4. Change application name into WebView
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+ 11. A New Resource Directory window open, in Resource type, choose Layout, and then
+ click OK button.
+ 12. New folder layout will appear under the Res folder.
+ 13. On the layout folder, right click and then choose New | Layout Resource File.
+ 14. A New Resource File window open, in File name, type activity_main.xml, and then
+ click OK button.
+ 15. The activity_main.xml then open, click Design button.
+ 16. On Component Tree, select LinearLayout (vertical), right click choose Convert LinearLayout
+ to ConstrainLayout.
+ 17. A Convert to ConstrainLayout window will appear, click OK button.
+ 18. Check the conversion by seeing the Code, then back to Design mode.
+ 19. Drag WebView from Palette to Component Tree
+ 20. Back to activity_main.xml file, choose Code tab to see the code.
+ 21. Find code below, and insert new line:
+<WebView
+ android:id="@+id/myWebView"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent" />
+
+ 22. Open MainActivity.kt, and then update the code into:
+ package com.example.webview
+ import android.os.Bundle
+ import android.webkit.WebView
+ import androidx.activity.ComponentActivity
+ class MainActivity : ComponentActivity() {
+ override fun onCreate(savedInstanceState: Bundle?) {
+ super.onCreate(savedInstanceState)
+ setContentView(R.layout.activity_main)
+ webViewSetup()
+ }
+ private fun webViewSetup() {
+ val myWebView: WebView = findViewById(R.id.myWebView)
+ myWebView.loadUrl("https://www.google.com")
+ }
+ }
+
+ 23. Open file AndroidManifest.xml, add code below under tag <manifest>:
+ <uses-permission android:name="android.permission.INTERNET" />
+ 24. Go to File and Save All
+ 25. Run on a generated AVD.
