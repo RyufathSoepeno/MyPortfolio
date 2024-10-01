@@ -1,0 +1,17 @@
+ 1. Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+ 4. Change application name into AssetStudio
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. On Project tab upper left find file res folder, right-click, then choose New, select Image Asset.
+ 11. An Asset Studio windows will appear.
+ 12. In Source Asset, choose Clip Art.
+ 13. Click on Clip Art, choose add ic call icon, click OK button.
+ 14. Change color to FFFFFF
+ 15. Click Next, click Finish
+ 16. Go to File and Save All
+ 17. Run on a generated AVD.
