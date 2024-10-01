@@ -1,0 +1,53 @@
+Then follow steps below:
+ 1. Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+4. Change application name into ImageView
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+ 11. A New Resource Directory window open, in Resource type, choose Layout, and then click OK
+ button.
+ 12. New folder layout will appear under the Res folder.
+ 13. On the layout folder, right click and then choose New | Layout Resource File.
+ 14. A New Resource File window open, in File name, type activity_main.xml, and then click OK
+ button.
+ 15. Open MainActivity.kt, and then update the code into:
+ package com.example.basiclayout
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ class MainActivity : ComponentActivity() {
+ override fun onCreate(savedInstanceState: Bundle?) {
+ super.onCreate(savedInstanceState)
+ setContent {
+ setContentView(R.layout.activity_main)
+ }
+ }
+ }
+ 16. The activity_main.xml then open, click Design button.
+ 17. On Component Tree, select LinearLayout (vertical), right click choose Convert LinearLayout
+ to ConstrainLayout.
+ 18. A Convert to ConstrainLayout window will appear, click OK button.
+
+ 19. Check the conversion by seeing the Code, then back to Design mode.
+ 20. Use Windows File Explorer, find image idn_green_logo_100x100px.png, then Copy.
+ 21. Go back to Android Studio, on Project tab, expand app then expand res, then expand and
+ choose drawable, right-click then Paste.
+ 22. A window will pop up, click OK.
+ 23. idn_green_logo_100x100px.png will appear on drawable folder.
+ 24. On Project tab upper left choose file activity_main.xml.
+ 25. Drag ImageView from Palette to Component Tree.
+ 26. A Pick a Resource window will appear, choose avatars then click OK.
+ 27. On Constraint Widget, set 32 from above and 32 from left.
+ 28. ImageView will change its position.
+ 29. Go to strings.xml insert following code to line 3:
+ <string name="image_desc1">Image Description 1</string>
+ 30. Go to activity_main.xml add following code on <ImageView> tag:
+ android:contentDescription="@string/image_desc1"
+ android:src="@drawable/idn_green_logo_100x100px"
+ 31. Go to File and Save All
+ 32. Run on a generated AVD
