@@ -1,0 +1,95 @@
+ Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+4. Change application name into BasicLayout
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+ 11. A New Resource Directory window open, in Resource type, choose Layout, and then click OK
+ button.
+ 12. New folder layout will appear under the Res folder.
+ 13. On the layout folder, right click and then choose New | Layout Resource File.
+ 14. A New Resource File window open, in File name, type activity_main.xml, and then click OK
+ button.
+ 15. The activity_main.xml then open, click Code button.
+ 16. Replace codes with codes below:
+ <?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 2" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Line 3" />
+    <CheckBox
+        android:id="@+id/checkBox"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Check Box 1" />
+    <CheckBox
+       android:id="@+id/checkBox2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Check Box 2" />
+    <CheckBox
+       android:id="@+id/checkBox3"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Check Box 2" />
+       <RadioGroup
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <RadioButton
+       android:id="@+id/radioButton"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Radio Button 1" />
+    <RadioButton
+       android:id="@+id/radioButton2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Radio Button 2" />
+    <RadioButton
+       android:id="@+id/radioButton3"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Radio Button 3" />
+    </RadioGroup>
+    <Button
+       android:id="@+id/button"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Button" />
+    </LinearLayout>
+
+       17. Open MainActivity.kt, and then update the code into:
+       package com.example.basiclayout
+       import android.os.Bundle
+       import androidx.activity.ComponentActivity
+       import androidx.activity.compose.setContent
+       class MainActivity : ComponentActivity() {
+       override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContent {
+       setContentView(R.layout.activity_main)
+       }
+       }
+       }
+       18. Go to File and Save All
+       19. Run on a generated AVD.
