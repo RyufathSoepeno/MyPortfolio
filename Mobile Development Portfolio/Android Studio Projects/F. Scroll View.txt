@@ -1,0 +1,49 @@
+ 1. Open Android Studio app.
+ 2. Choose New Project.
+ 3. On tab Phone and Tablet, choose Empty Activity, then click Next button. 
+4. Change application name into ScrollView
+ 5. Ensure Minimum SDK Level is API 29 ("Q"; Android 10.0)
+ 6. Choose Kotlin DSL (build.gradle.kts) as Build configuration language.
+ 7. Click Finish
+ 8. Android Studio will do Completing Requested Actions. Please wait and click Finish.
+ 9. Android Studio will load the related components, please wait.
+ 10. Go to the Project tab, right click on the Res folder, click New | Android Resource Directory.
+ 11. A New Resource Directory window open, in Resource type, choose Layout, and then click OK
+ button.
+ 12. New folder layout will appear under the Res folder.
+ 13. On the layout folder, right click and then choose New | Layout Resource File.
+ 14. A New Resource File window open, in File name, type activity_main.xml, and then click OK
+ button.
+ 15. The activity_main.xml then open.
+ 16. Add a ScrollView, drag ScrollView from Palette to Component Tree
+ 17. Add also a TextView from Palette to Component Tree under LinearLayout | ScrollView
+ 18. Open MainActivity.kt, and then update the code into:
+ package com.example.basiclayout
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ class MainActivity : ComponentActivity() {
+ override fun onCreate(savedInstanceState: Bundle?) {
+ super.onCreate(savedInstanceState)
+ setContent {
+ setContentView(R.layout.activity_main)
+ }
+ }
+ }
+
+ 19. Go to strings.xml add a content to line 3
+
+ 20. Go to activity_main.xml update following code on <TextView> tag:
+ <TextView
+ android:id="@+id/textView2"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:text="@string/content" />
+ Web References
+ 21. Go to Design, click Content text
+ 22. Find padding on Attributes, then expand
+ 23. Make all: padding, paddingStart, paddingLeft, paddingTop, paddingEnd, paddingRight,
+ paddingBottom with 20dp
+ 24. Go to activity_main.xml in Design mode and you will find text are exceeded the layout
+ 25. Go to File and Save All
+ 26. Run on a generated AVD
