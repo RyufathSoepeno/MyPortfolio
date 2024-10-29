@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Replicates the layout of the header and body structure -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/myRestaurantTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_restaurant"
+        android:textSize="28sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myRestaurantTitle"
+        android:text="@string/tagline_text"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/button_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagline"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/button_green"
+        android:text="@string/order_now"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/black" />
+
+    <!-- index.html -->
+    <ImageView
+        android:id="@+id/wingstop_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nashville1"
+        android:scaleType="centerCrop" />
+
+
+</RelativeLayout>

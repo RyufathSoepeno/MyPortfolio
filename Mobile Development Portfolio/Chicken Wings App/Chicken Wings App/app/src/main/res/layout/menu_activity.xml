@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_title"
+            android:textSize="24sp"
+            android:textColor="@color/green_dark" />
+
+        <!-- Each menu item layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="10dp">
+
+            <!-- Cajun -->
+            <ImageView
+                android:id="@+id/cajun_rub_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/cajun2"
+                android:contentDescription="@string/cajun_rub_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Buffalo -->
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/buffalo2"
+                android:contentDescription="@string/buffalo_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Sriracha -->
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/sriracha4"
+                android:contentDescription="@string/sriracha_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Mumbo -->
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/mumbowings5"
+                android:contentDescription="@string/mumbo_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Peanut -->
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/peanut6"
+                android:contentDescription="@string/spicy_peanut_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Garlic Parmesan -->
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/garlicparmesan7"
+                android:contentDescription="@string/garlic_parmesan_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Hawaii -->
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/hawaii8"
+                android:contentDescription="@string/hawaiian_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <!-- Hickory -->
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/hickory9"
+                android:contentDescription="@string/hickory_smoked_wings_description"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajun_rub_description"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_now"
+                android:backgroundTint="@color/green_dark"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
