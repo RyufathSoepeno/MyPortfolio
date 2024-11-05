@@ -1,0 +1,54 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/instructionsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:id="@+id/tileGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center">
+
+        <!-- Create 9 Button elements for the tiles -->
+        <Button
+            android:id="@+id/tile_0"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_1"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_2"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_3"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_4"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_5"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_6"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_7"
+            style="@style/TileButton"/>
+        <Button
+            android:id="@+id/tile_8"
+            style="@style/TileButton"/>
+    </GridLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">Tile Puzzle</string>
+    <string name="instructions">Press the tiles in the correct order!</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong, try again!</string>
+</resources>
