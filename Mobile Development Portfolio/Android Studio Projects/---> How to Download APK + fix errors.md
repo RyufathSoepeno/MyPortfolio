@@ -14,3 +14,6 @@ Updates:
 Change Gradle Settings to run code -> Go to file > Settings > Build, Execution,Deployment > Build Tools > Gradle and choose local gradle. Then I type the path( C:/Program Files/Android/Android Studio/gradle/gradle-2.2.1 ) and click ok. At the last part I can connect to the internet after all.
 
 styles.xml is now themes.xml
+
+
+If for some reason you get errors, go to build gradle (module:app) and change the sdk to latest version, the error will tell you)
