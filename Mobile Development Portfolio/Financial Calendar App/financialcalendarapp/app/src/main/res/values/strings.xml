@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Financial Calendar App</string>
+    <string name="add_transaction">Add Transaction</string>
+</resources>

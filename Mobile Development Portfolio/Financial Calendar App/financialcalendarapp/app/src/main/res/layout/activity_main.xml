@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <!-- Header with dark green background -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004d00"
+        android:padding="16dp"
+        android:text="Financial Calendar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <!-- Calendar View -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Amount input -->
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_below="@id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:padding="12dp"/>
+
+    <!-- Description input -->
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_below="@id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter description"
+        android:padding="12dp"/>
+
+    <!-- Date and Time Buttons -->
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_below="@id/descriptionInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Date"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_below="@id/descriptionInput"
+        android:layout_toRightOf="@id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Time"
+        android:layout_margin="8dp"/>
+
+    <!-- Add Transaction Button -->
+    <Button
+        android:id="@+id/addTransactionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Transaction"
+        android:background="#004d00"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/dateButton"
+        android:layout_margin="16dp"/>
+
+    <!-- ListView for transactions -->
+    <ListView
+        android:id="@+id/transactionListView"
+        android:layout_below="@id/addTransactionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"/>
+</RelativeLayout>
