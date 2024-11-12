@@ -16,4 +16,4 @@ Change Gradle Settings to run code -> Go to file > Settings > Build, Execution,D
 styles.xml is now themes.xml
 
 
-If for some reason you get errors, go to build gradle (module:app) and change the sdk to latest version, the error will tell you)
+If for some reason you get errors, go to build gradle (module:app) and change the sdk to latest version, the error will tell you) and click "sync" as it appears
