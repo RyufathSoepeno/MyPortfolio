@@ -19,15 +19,23 @@ Data Integrity: How complete a data is, does it need updates, etc?
 
 =====================
 
-The following constraints are commonly used in SQL:
+The following definitions are commonly used in SQL:
 
 NOT NULL - Ensures that a column cannot have a NULL value
 
+CONSTRAINTS - In a nutshell, it is the limits or rules between databases
+
+SCHEMA - Description of the Database (Changes infrequently/intention)
+
 UNIQUE - Ensures that all values in a column are different
 
-PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table. <b>Has to be unique value</b>
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table. <b>Can only be one attribute in each table</b>
 
 FOREIGN KEY - A key that references the primary key
+
+ATTRIBUTE - In a nutshell, it is the header
+
+DOMAIN - In a nutshell, it is the value or sets of attributes
 
 CHECK - Ensures that the values in a column satisfies a specific condition
 
@@ -35,5 +43,5 @@ DEFAULT - Sets a default value for a column if no value is specified
 
 CREATE INDEX - Used to create and retrieve data from the database very quickly
 
-STATE - 
+STATE - Content of a database at a moment of time (Changes frequently/extension)
 
