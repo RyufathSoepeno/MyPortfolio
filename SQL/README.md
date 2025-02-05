@@ -29,9 +29,9 @@ SCHEMA - Description of the Database (Changes infrequently/intention)
 
 UNIQUE - Ensures that all values in a column are different
 
-PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table. <b>Can only be one attribute in each table</b>
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE constraint. Uniquely identifies each row in a table. <b>Can only be one attribute in each table</b>
 
-FOREIGN KEY - A key that references the primary key
+FOREIGN KEY - A key constraint that references the primary key
 
 ATTRIBUTE - In a nutshell, it is the header
 
@@ -45,3 +45,4 @@ CREATE INDEX - Used to create and retrieve data from the database very quickly
 
 STATE - Content of a database at a moment of time (Changes frequently/extension)
 
+Redundancy - When a database has tons of duplicates
