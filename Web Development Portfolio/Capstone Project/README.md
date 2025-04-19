@@ -1,4 +1,4 @@
-Here is the link to the capstone project
+Here is the link to the capstone project: https://github.com/RyufathSoepeno/AffectBoard
 
 Capstone Project submitted for APCV 498 - Capstone Project course, University of Arizona. 
 
