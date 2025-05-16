@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebek Nusantara - Home</title>
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\css\styles.css">
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\css\utility-styles.css">
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\css\store.css">
+</head>
+<body>
+    <!-- The header contains all the navigation links of the website. For some reason, font awesome does not work on my VS Code and my Notebook++. 
+    Even when I used alternate font awesome links, it did not work, so I had to use a manual image that had been background erased-->
+    <header>
+        <nav>
+            <div class="menu-container">
+                <div class="left-bar" tabindex="0">
+                    <img src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\images\Three Bars.png" alt="Menu Icon" height="50px" width="50px">
+                </div>
+                <div class="dropdown">
+                    <a href="store.html">Menu</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+            <div class="logo">
+                <p class="bebeklogo"><a href="index.html"><img src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\images\Logo.png" alt="Bebek Logo" height="50px" width="50px"></a></p>
+            </div>
+            <ul class="nav-links">
+                <li><img class="glass" src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\images\Magnifying Glass.png" height="35px" width="35px"></li>
+                <li><a href="store.html">Menu</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- This serves as the main tagline as all websites go-->
+    <section class="hero">
+        <img class="heroism" src="https://malangraya.blok-a.com/wp-content/uploads/sites/5/2024/01/Screenshot-2024-01-25-112721.png">
+            <h1 class="Tagline">BEBEK NUSANTARA - Authentic Indonesian Duck Cuisine</h1>
+    </section>
+    <!-- These are the recommended list of products that are sold in this online restaurant store website, along with their prices and ratings, etc.-->
+    <!-- They contain small-sized images -->
+    <section class="suggested-products">
+        <article>
+            <h2 style="position: relative; left: 1%;">Recommended Dishes</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://cf.shopee.co.id/file/210cea52729b87cb13c82630e286e613" height="60px" width="60px">
+                    <h3>Bebek Goreng</h3>
+                    <p>Crispy Fried Duck with Sambal</p>
+                    <span class="price">$8.99</span>
+                    <br><br>
+                    <span class="price">Rating: 8.8/10</span>
+                </div>
+                <div class="product">
+                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/07/Bebek-Betutu-rumah-makan-Bali.jpg" height="60px" width="60px">
+                    <h3>Bebek Betutu</h3>
+                    <p>Balinese Duck with Sambal Matah</p>
+                    <span class="price">$13.99</span>
+                    <br><br>
+                    <span class="price">Rating: 10/10</span>
+                </div>
+                <div class="product">
+                    <img src="https://www.finnafood.com/blog/wp-content/uploads/2023/10/13.-Resep-Bebek-Madura-Bumbu-Hitam-Pedas-Gurih.jpg" height="60px" width="60px">
+                    <h3>Bebek Madura</h3>
+                    <p>Maduranese Style Duck with <br>Toasted Coconuts and Sambal</p>
+                    <span class="price">$8.99</span>
+                    <br><br>
+                    <span class="price">Rating: 9.5/10</span>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/dbd30f5c-0411-4827-bca8-33e0f98716be_Go-Biz_20200906_135120.jpeg" height="60px" width="60px">
+                    <h3>Bebek Kuwali</h3>
+                    <p>Spicy and Sour-based <br>Javanese Duck</p>
+                    <span class="price">$10.99</span>
+                    <br><br>
+                    <span class="price">Rating: 9.3/10</span>
+                </div>
+                <div class="product">
+                    <img src="https://www.dapurkobe.co.id/wp-content/uploads/bebek-bacem-bakar-kecap.jpg" height="60px" width="60px">
+                    <h3>Bebek Bacem</h3>
+                    <p>Dry-based Sweetened Javanese <br>Duck with Fresh Vegetables</p>
+                    <span class="price">$9.99</span>
+                    <br><br>
+                    <span class="price">Rating: 8.8/10</span>
+                </div>
+                <div class="product">
+                    <img src="https://www.primarasa.co.id/images/images/Bebek%20Garo%20Rica%20Resep%281%29.jpg" height="60px" width="60px">
+                    <h3>Bebek Garo Rica</h3>
+                    <p>Spicy Rica-Rica Ducks fresh <br>from Manado</p>
+                    <span class="price">$11.99</span>
+                    <br><br>
+                    <span class="price">Rating: 9.8/10</span>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <p>&copy; Bebek Nusantara 2025</p>
+    </footer>
+</body>
+</html>
