@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(254, 207, 207);
+    align-items: center;
+    text-align: center;
+    background-color: #30887A;
+    z-index: 1000;
+    position: fixed;
+    font-size: 18px;
+    padding: 18px 10px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 120px;
+    background-color: #f4f4f4;
+}
+.container {
+    background: white;
+    width: 300px;
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: center;
+}
+.container h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    background-color: #30887A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #266e60;
+}
+input, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-group .compatibility-options {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+}
+
+.form-group .compatibility-options label {
+    flex: 1;
+    margin-top:5px;
+    text-align: center;
+}
+
+.form-group .compatibility-options input {
+    margin-right: 2px;
+}

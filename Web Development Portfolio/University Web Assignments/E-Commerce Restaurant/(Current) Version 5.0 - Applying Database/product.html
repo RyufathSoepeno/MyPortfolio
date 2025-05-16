@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebek Nusantara - Inserted Product</title>
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 3 - Server Side Programming\css\styles.css">
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 3 - Server Side Programming\css\store.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-container">
+                <div class="left-bar" tabindex="0">
+                    <img src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 2 - Responsive Page Layout and Design\images\Three Bars.png" alt="Menu Icon" height="50px" width="50px">
+                </div>
+                <div class="dropdown">
+                    <a href="store.html">Menu</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+            <div class="logo">
+                <p class="bebeklogo"><a href="index.html"><img src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 3 - Server Side Programming\images\Logo.png" alt="Bebek Logo" height="50px" width="50px"></a></p>
+            </div>
+            <ul class="nav-links">
+                <form action="http://localhost/Web Prog Assignment 3\search.php" method="GET" class="search-form">
+                    <input type="text" name="query" placeholder="Search..." required>
+                    <button type="submit" style="border: none; background: none; cursor: pointer;">
+                        <img class="glass" src="C:\Users\ASUS\OneDrive - Sampoerna University\Documents\HTML CSS JAVASCRIPT\UA Assignments\Web Programming\Assignment 3 - Server Side Programming\images\Magnifying Glass.png" height="20px" width="20px" onclick="document.getElementById('searchForm').submit();" style="cursor: pointer;" alt="Search">
+                    </button>
+                </form>
+                <li><a href="store.html">Menu</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="product-details" style="position: relative; top: 150px;"></div> <!-- This is where the main body can be located-->
+
+    <footer class="otherfooter" style="position: relative; margin-top: 50px;">
+        <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <br>
+        <p>&copy; Bebek Nusantara 2025</p>
+    </footer>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                id: params.get("id"),
+                name: params.get("name"),
+                desc: params.get("desc"),
+                price: params.get("price"),
+                rating: params.get("rating"),
+                keywords: params.get("keywords"),
+                imgSrc: params.get("imgSrc")
+            };
+        }
+
+        const product = getQueryParams();
+
+        document.getElementById("product-details").innerHTML = `
+            <h2>#${product.id}</h2>
+            <h1>${product.name}</h1>
+            <img src="${decodeURIComponent(product.imgSrc)}" alt="${product.name}" width="200px">
+            <p><strong>Description:</strong> ${product.desc}</p>
+            <p><strong>Price:</strong> $${product.price}</p>
+            <p><strong>Rating:</strong> ${product.rating}/10</p>
+            <p><strong>Keywords:</strong> ${product.keywords}</p>
+        `;
+    </script>
+</body>
+</html>
