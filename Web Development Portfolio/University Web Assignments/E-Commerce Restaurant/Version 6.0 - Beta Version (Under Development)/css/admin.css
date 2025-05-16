@@ -1,0 +1,265 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body: keep padding to avoid overlap */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px; /* Keeps content below header */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header: mimic store.php style */
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0b2242;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 125px; 
+    left: 0;
+    background-color: #AB0520;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-container:hover .dropdown,
+.menu-container:focus-within .dropdown {
+    display: block;
+}
+
+.glass{
+    position: absolute;
+    top: 25%;
+    right: 73%;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a,
+.nav-links button {
+    padding: 6px 10px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+    background: #ab0520;
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form select {
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-form button img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 8px 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0b2242;
+    color: white;
+    font-weight: 600;
+}
+
+/* Slim table rows */
+table tr {
+    height: 40px;
+}
+
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Forms inside table: no blocky padding */
+table form {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slim select & textarea */
+select,
+textarea,
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Buttons */
+button {
+    padding: 5px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background: #ab0520;
+    color: white;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button[name="review_action"][value="ban"] {
+    background: #ab0520;
+}
+
+button[name="review_action"][value="ban"]:hover {
+    background: #ab0520;
+}
+
+button[name="review_action"][value="unban"] {
+    background: #ab0520;
+}
+
+button[name="review_action"][value="unban"]:hover {
+    background: #ab0520;
+}
+
+/* Section Headings */
+h2 {
+    margin: 30px auto 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #0b2242;
+}
+
+/* Send Message Form */
+form {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+
+form select,
+form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer.otherfooter {
+    text-align: center;
+    margin-top: 300px;
+    padding: 20px;
+    bottom: -6200px;
+    background: #0b2242;
+    border-top: 1px solid #ddd;
+    color: white;
+}
+
+footer.otherfooter ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer.otherfooter ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer.otherfooter a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer.otherfooter a:hover {
+    color: #ddd;
+}
