@@ -1,0 +1,45 @@
+#Tutorial from an SQL perspective
+
+The queries in mongodb are called documents. Documents are documented through JSON
+
+They have databases
+
+However, in here, the databases can have collections, collections are an equivalent of a table
+
+To insert it, you can either use "Add Data" or "MongoDB shell"
+
+To export connection, simply click on the three dots
+
+In here, you can update a certain value quickly using Update button
+
+It works like a code, you can add var var_name = "variable"; because it uses JavaScript
+
+
+
+MongoDB shell tutorials:
+
+1. type "use {database_name}"
+
+2. type "db"
+
+3. type "db.{collection_name}"
+
+to select all values: db["{collection_name}"].find()
+
+to insert: db.{}.insertOne({})
+
+
+to show all collections in a database: show {collection_name}
+
+DON'T FORGET TO REFRESH, it is important to know when the data is in or out
+
+
+
+difference between shell:
+var: 1
+
+and mongodb panel:
+"var": 1
+
+
+
