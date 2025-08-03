@@ -26,7 +26,10 @@ MongoDB shell tutorials:
 
 to select all values: db["{collection_name}"].find()
 
-to insert: db.{}.insertOne({})
+to insert: db.{}.insertOne({}) or db.{}.insertMany({})
+to create: db.{}.insertOne({})
+to update: db.{}.updateOne({})
+to select, read, or search: db.{}.findOne({})
 
 
 to show all collections in a database: show {collection_name}
@@ -42,4 +45,42 @@ and mongodb panel:
 "var": 1
 
 
+Aggregation:
+db.orders.aggregate( [
+   // Stage 1: Filter pizza order documents by pizza size
+   {
+      $match: { size: "medium" }
+   },
+   // Stage 2: Group remaining documents by pizza name and calculate total quantity
+   {
+      $group: { _id: "$name", totalQuantity: { $sum: "$quantity" } }
+   }
+] )
 
+
+Other aggregations:
+db.collection.estimatedDocumentCount():
+Returns an approximate count of the documents in a collection or a view.
+
+db.collection.count():
+Returns a count of the number of documents in a collection or a view.
+
+db.collection.distinct():
+Returns an array of documents that have distinct values for the specified field.
+
+Change streams allow applications to access real-time data changes without the prior complexity
+
+Change Stream
+const collection = db.collection('inventory');
+const changeStream = collection.watch();
+changeStream
+  .on('change', next => {
+    // process next document
+  })
+  .once('error', () => {
+    // handle error
+  });
+
+
+We can use "await" for synchronizing timely queries or scripts:
+await client.connect(); // waits until the connection is established
