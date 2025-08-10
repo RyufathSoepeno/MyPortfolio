@@ -1,8 +1,6 @@
 import sys
 import functools
 
-import time, hmac, hashlib
-
 def main():
     data = sys.stdin.read().splitlines()  # read all input first, line by line
     # Defensive: if no lines, nothing to output
@@ -102,18 +100,5 @@ def main():
     # Print results, no blank lines between outputs
     sys.stdout.write("\n".join(results))
 
-def totp_for_user(userid, digits=10, timestep=30):
-    # secret is ascii bytes of userid + fixed suffix
-    secret = (userid + "HENNGECHALLENGE004").encode("ascii")
-    T = int(time.time() // timestep)
-    # T as 8-byte big-endian
-    msg = T.to_bytes(8, "big")
-    digest = hmac.new(secret, msg, hashlib.sha512).digest()
-    offset = digest[-1] & 0x0F
-    # dynamic truncation to 4 bytes
-    code_int = int.from_bytes(digest[offset:offset+4], "big") & 0x7FFFFFFF
-    return str(code_int % (10 ** digits)).zfill(digits)
-
 if __name__ == "__main__":
-    email = "your_email@example.com"   # replace
-    print(totp_for_user(email))
+    main()
