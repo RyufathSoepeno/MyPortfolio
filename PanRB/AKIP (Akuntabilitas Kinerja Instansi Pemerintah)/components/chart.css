@@ -1,0 +1,14 @@
+/* Chart Component Styles */
+/* Chart container styling */
+#chart-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #chart-container {
+        height: 400px;
+    }
+}

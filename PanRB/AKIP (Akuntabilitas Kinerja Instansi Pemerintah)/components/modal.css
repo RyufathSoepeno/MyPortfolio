@@ -1,0 +1,124 @@
+/* Modal Component Styles */
+/* Fix modal z-index untuk muncul di depan DataTable */
+.bw-modal-detail-instansi {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+.bw-modal-detail-instansi .bw-modal-backdrop {
+    z-index: 99998 !important;
+    position: fixed !important;
+}
+
+.bw-modal-detail-instansi .bw-modal-container {
+    z-index: 100000 !important;
+    position: relative !important;
+}
+
+/* Ensure modal appears above DataTable */
+[data-modal="detail-instansi"] {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+[data-modal="detail-instansi"] .bw-modal-backdrop {
+    z-index: 99998 !important;
+    position: fixed !important;
+}
+
+[data-modal="detail-instansi"] .bw-modal-container {
+    z-index: 100000 !important;
+    position: relative !important;
+}
+
+/* Force modal to be on top of everything */
+.bw-modal {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+.bw-modal .bw-modal-backdrop {
+    z-index: 99998 !important;
+    position: fixed !important;
+}
+
+.bw-modal .bw-modal-container {
+    z-index: 100000 !important;
+    position: relative !important;
+}
+
+/* Additional aggressive z-index fixes */
+.bw-modal[data-modal="detail-instansi"] {
+    z-index: 99999 !important;
+    position: fixed !important;
+}
+
+.bw-modal[data-modal="detail-instansi"] .bw-modal-backdrop {
+    z-index: 99998 !important;
+    position: fixed !important;
+}
+
+.bw-modal[data-modal="detail-instansi"] .bw-modal-container {
+    z-index: 100000 !important;
+    position: relative !important;
+}
+
+/* Nuclear option - force modal to be absolutely on top */
+body:has(.bw-modal[data-modal="detail-instansi"]) .bw-modal[data-modal="detail-instansi"] {
+    z-index: 2147483647 !important;
+    position: fixed !important;
+}
+
+body:has(.bw-modal[data-modal="detail-instansi"]) .bw-modal[data-modal="detail-instansi"] .bw-modal-backdrop {
+    z-index: 2147483646 !important;
+    position: fixed !important;
+}
+
+body:has(.bw-modal[data-modal="detail-instansi"]) .bw-modal[data-modal="detail-instansi"] .bw-modal-container {
+    z-index: 2147483647 !important;
+    position: relative !important;
+}
+
+/* Alternative approach using attribute selector */
+[data-modal="detail-instansi"][style*="display: block"],
+[data-modal="detail-instansi"][style*="display:block"] {
+    z-index: 2147483647 !important;
+    position: fixed !important;
+}
+
+/* Modal content styling untuk scroll yang lebih baik */
+#modal-content {
+    max-height: 16rem; /* 256px - lebih compact dari max-h-64 */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+#modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#modal-content::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 3px;
+}
+
+#modal-content::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+#modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Ensure modal content items have proper spacing */
+#modal-content .space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+/* Modal size adjustment */
+.bw-modal[data-modal="detail-instansi"] .bw-modal-container {
+    max-height: 80vh;
+    max-width: 600px;
+}

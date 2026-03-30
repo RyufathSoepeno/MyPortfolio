@@ -1,0 +1,67 @@
+/* Card Component Styles */
+.intro-y {
+    position: relative;
+}
+
+.box {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.p-5 {
+    padding: 1.25rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-blue-600 {
+    color: #2563eb;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.w-8 {
+    width: 2rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+}
