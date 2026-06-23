@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<!-- This prototype was created to improve Close Branch activities with emphasis on
+Cash-In-Transits (CITs) for improved efficiency and compliance to existing
+BRI SOPs -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDS - Prototype Penutupan Cabang</title>
+    <style>
+        :root {
+            --primary-blue: #00529C;
+            --secondary-blue: #F0F4F8;
+            --success-green: #28A745;
+            --danger-red: #DC3545;
+            --warning-orange: #FFC107;
+            --text-dark: #333;
+            --text-light: #fff;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #E9ECEF;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--text-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* CIT Monitor Section */
+        .cit-monitor {
+            background-color: var(--secondary-blue);
+            border: 1px solid var(--primary-blue);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cit-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar-cit {
+            height: 100%;
+            background-color: var(--warning-orange);
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-bar-cit.complete {
+            background-color: var(--success-green);
+        }
+
+        .btn-simulate {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            align-self: flex-start;
+        }
+
+        .btn-simulate:hover {
+            background-color: #004080;
+        }
+
+        /* Table Section */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            font-weight: bold;
+        }
+
+        /* Priority Progress Bar */
+        .priority-bar-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            height: 10px;
+            margin-top: 5px;
+        }
+
+        .priority-bar {
+            height: 100%;
+            background-color: #6c757d;
+            border-radius: 4px;
+        }
+
+        /* Status & Buttons */
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-align: center;
+            display: inline-block;
+            min-width: 70px;
+        }
+
+        .status-not-ok {
+            background-color: #F8D7DA;
+            color: var(--danger-red);
+        }
+
+        .status-ok {
+            background-color: #D4EDDA;
+            color: var(--success-green);
+        }
+
+        .btn-approve {
+            background-color: var(--text-light);
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-approve:hover:not(:disabled) {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+        }
+
+        .btn-approve:disabled {
+            border-color: var(--border-color);
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        /* Footer Section */
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .btn-close-branch {
+            background-color: var(--danger-red);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-close-branch:disabled {
+            background-color: #e9ecef;
+            color: #a1a1a1;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <div class="header">
+        <h1>NDS - Branch Integrated Close Branch</h1>
+        <span>22/05/2026</span>
+    </div>
+
+    <div class="content">
+        <div class="cit-monitor">
+            <h3>Monitor Kedatangan Uang (Cash-In-Transit)</h3>
+            <div class="cit-stats">
+                <span>Uang Tersedia di Vault (Y): <span id="currentCashText">0</span></span>
+                <span>Target Uang Fisik (X): <span id="targetCashText">0</span></span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar-cit" id="citProgressBar" style="width: 0%;"></div>
+            </div>
+            <button class="btn-simulate" id="btnSimulate">Simulasikan Kedatangan Uang (Y = X)</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Prioritas</th>
+                    <th>Layanan</th>
+                    <th>Estimasi Waktu Penyelesaian</th>
+                    <th>Status</th>
+                    <th>Tindakan</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+                </tbody>
+        </table>
+
+        <div class="footer">
+            <button class="btn-close-branch" id="btnCloseBranch" disabled>Tutup Cabang</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Inisialisasi variabel X (Target) dan Y (Current)
+    // X di-generate antara 500 dan 1000
+    // Y di-generate antara 100 dan X-50 (memastikan Y < X di awal)
+    let targetCashX = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+    let currentCashY = Math.floor(Math.random() * ((targetCashX - 50) - 100 + 1)) + 100;
+
+    // Data Tugas (Sudah diurutkan dari prioritas durasi terlama ke tercepat)
+    const tasks = [
+        { id: 'cit', title: 'Penerimaan Cash-In-Transit (CIT)', duration: 100, status: 'NOT OK' },
+        { id: 'tcoh', title: 'Teller Cash On Hand Brinets', duration: 85, status: 'NOT OK' },
+        { id: 'rtgs', title: 'Outward RTGS', duration: 70, status: 'NOT OK' },
+        { id: 'opt', title: 'Over Pending Transaction', duration: 55, status: 'NOT OK' },
+        { id: 'uej', title: 'Unverified EJ', duration: 50, status: 'NOT OK' },
+        { id: 'lpot', title: 'Local Pending Offline Transaction', duration: 40, status: 'NOT OK' },
+        { id: 'lt', title: 'Local Timeout', duration: 30, status: 'NOT OK' },
+        { id: 'lu', title: 'Local Users', duration: 15, status: 'NOT OK' },
+        { id: 'urn', title: 'User Release NDS', duration: 10, status: 'NOT OK' }
+    ];
+
+    // Format mata uang untuk tampilan
+    function formatCurrency(amount) {
+        return "Rp " + amount.toLocaleString('id-ID') + " Juta";
+    }
+
+    // Update UI Monitor CIT
+    function updateCITMonitor() {
+        document.getElementById('currentCashText').innerText = formatCurrency(currentCashY);
+        document.getElementById('targetCashText').innerText = formatCurrency(targetCashX);
+        
+        let percentage = (currentCashY / targetCashX) * 100;
+        const progressBar = document.getElementById('citProgressBar');
+        progressBar.style.width = percentage + "%";
+
+        if (currentCashY >= targetCashX) {
+            progressBar.classList.add('complete');
+            document.getElementById('btnSimulate').disabled = true;
+            document.getElementById('btnSimulate').innerText = "Uang Sudah Lengkap";
+        }
+    }
+
+    // Render Tabel
+    function renderTable() {
+        const tbody = document.getElementById('taskTableBody');
+        tbody.innerHTML = ''; // Clear existing rows
+
+        tasks.forEach((task, index) => {
+            const tr = document.createElement('tr');
+            
+            // Logika class untuk Status Badge
+            const statusClass = task.status === 'OK' ? 'status-ok' : 'status-not-ok';
+            const disableButton = task.status === 'OK' ? 'disabled' : '';
+
+            tr.innerHTML = `
+                <td style="text-align: center; font-weight: bold;">${index + 1}</td>
+                <td>${task.title}</td>
+                <td>
+                    <div style="font-size: 0.85rem; margin-bottom: 3px;">Relatif: ${task.duration}%</div>
+                    <div class="priority-bar-container">
+                        <div class="priority-bar" style="width: ${task.duration}%; ${task.duration > 70 ? 'background-color: var(--danger-red);' : task.duration > 40 ? 'background-color: var(--warning-orange);' : 'background-color: var(--success-green);'}"></div>
+                    </div>
+                </td>
+                <td><span class="status-badge ${statusClass}">${task.status}</span></td>
+                <td>
+                    <button class="btn-approve" onclick="approveTask('${task.id}')" ${disableButton}>
+                        ${task.status === 'OK' ? 'Disetujui' : 'Setujui'}
+                    </button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+
+        checkAllOk();
+    }
+
+    // Logika Persetujuan (Approve) & HARDBLOCK
+    window.approveTask = function(taskId) {
+        if (taskId === 'cit') {
+            // CEK HARDBLOCK
+            if (currentCashY < targetCashX) {
+                alert(`HARDBLOCK SYSTEM ERROR:\n\nPersetujuan Ditolak! Uang fisik di vault (${formatCurrency(currentCashY)}) belum sesuai dengan manifes CIT (${formatCurrency(targetCashX)}).\n\nSilakan tunggu hingga uang fisik tiba sebelum menyetujui.`);
+                return; // Hentikan eksekusi, status tetap NOT OK
+            }
+        }
+
+        // Jika lolos hardblock atau task lain, ubah status jadi OK
+        const taskIndex = tasks.findIndex(t => t.id === taskId);
+        if (taskIndex !== -1) {
+            tasks[taskIndex].status = 'OK';
+            renderTable();
+        }
+    };
+
+    // Simulasi kedatangan uang
+    document.getElementById('btnSimulate').addEventListener('click', function() {
+        currentCashY = targetCashX;
+        updateCITMonitor();
+        alert("Simulasi: Uang telah tiba. Vault kini sesuai dengan target manifes.");
+    });
+
+    // Cek apakah semua task sudah OK untuk membuka tombol "Tutup Cabang"
+    function checkAllOk() {
+        const allOk = tasks.every(task => task.status === 'OK');
+        const btnClose = document.getElementById('btnCloseBranch');
+        
+        if (allOk) {
+            btnClose.disabled = false;
+        } else {
+            btnClose.disabled = true;
+        }
+    }
+
+    // Eksekusi penutupan cabang
+    document.getElementById('btnCloseBranch').addEventListener('click', function() {
+        alert("Sistem Cabang Berhasil Ditutup!");
+    });
+
+    // Inisialisasi awal
+    updateCITMonitor();
+    renderTable();
+
+</script>
+</body>
+</html>
