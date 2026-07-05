@@ -383,24 +383,40 @@ BRI SOPs -->
 
 					${
 						task.status === "OK"
-						? "<div style='font-size:12px;font-weight:bold;color:#28A745;margin-bottom:5px;'>Completed</div>"
-						: "<div style='font-size:12px;margin-bottom:5px;'>Priority Score: " + task.duration + "</div>"
-					}
-
-					<div class="priority-bar-container">
-						<div class="priority-bar"
-							style="
-								width:${task.duration}%;
-								${
-									task.duration > 70
-									? 'background-color: var(--danger-red);'
-									: task.duration > 40
-									? 'background-color: var(--warning-orange);'
-									: 'background-color: var(--success-green);'
-								}
+						? `
+							<div style="
+								font-size:13px;
+								font-weight:bold;
+								color:var(--success-green);
+								text-align:center;
 							">
-						</div>
-					</div>
+								✓ Completed
+							</div>
+						`
+						: `
+							<div style="
+								font-size:12px;
+								margin-bottom:5px;
+							">
+								Priority Score: ${task.duration}
+							</div>
+
+							<div class="priority-bar-container">
+								<div class="priority-bar"
+									style="
+										width:${task.duration}%;
+										${
+											task.duration > 70
+											? 'background-color: var(--danger-red);'
+											: task.duration > 40
+											? 'background-color: var(--warning-orange);'
+											: 'background-color: var(--success-green);'
+										}
+									">
+								</div>
+							</div>
+						`
+					}
 
 				</td>
                 <td><span class="status-badge ${statusClass}">${task.status}</span></td>
