@@ -215,7 +215,7 @@ BRI SOPs -->
 <div class="dashboard-container">
     <div class="header">
         <h1>NDS - Branch Integrated Close Branch</h1>
-        <span>22/05/2026</span>
+        <span>05/07/2026</span>
     </div>
 
     <div class="content">
@@ -236,9 +236,8 @@ BRI SOPs -->
                 <tr>
                     <th>Prioritas</th>
                     <th>Layanan</th>
-                    <th>Estimasi Waktu Penyelesaian</th>
+                    <th>Estimasi Prioritas</th>
                     <th>Status</th>
-                    <th>Tindakan</th>
                 </tr>
             </thead>
             <tbody id="taskTableBody">
@@ -246,7 +245,7 @@ BRI SOPs -->
         </table>
 
         <div class="footer">
-            <button class="btn-close-branch" id="btnCloseBranch" disabled>Tutup Cabang</button>
+            <button class="btn-close-branch" id="btnCloseBranch">Tutup Cabang</button>
         </div>
     </div>
 </div>
@@ -258,18 +257,91 @@ BRI SOPs -->
     let targetCashX = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
     let currentCashY = Math.floor(Math.random() * ((targetCashX - 50) - 100 + 1)) + 100;
 
-    // Data Tugas (Sudah diurutkan dari prioritas durasi terlama ke tercepat)
-    const tasks = [
-        { id: 'cit', title: 'Penerimaan Cash-In-Transit (CIT)', duration: 100, status: 'NOT OK' },
-        { id: 'tcoh', title: 'Teller Cash On Hand Brinets', duration: 85, status: 'NOT OK' },
-        { id: 'rtgs', title: 'Outward RTGS', duration: 70, status: 'NOT OK' },
-        { id: 'opt', title: 'Over Pending Transaction', duration: 55, status: 'NOT OK' },
-        { id: 'uej', title: 'Unverified EJ', duration: 50, status: 'NOT OK' },
-        { id: 'lpot', title: 'Local Pending Offline Transaction', duration: 40, status: 'NOT OK' },
-        { id: 'lt', title: 'Local Timeout', duration: 30, status: 'NOT OK' },
-        { id: 'lu', title: 'Local Users', duration: 15, status: 'NOT OK' },
-        { id: 'urn', title: 'User Release NDS', duration: 10, status: 'NOT OK' }
-    ];
+    // Utility function
+	function random(min, max){
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	// Generate randomized estimated service time
+	const randomDurations = [
+		random(75,95),
+		random(65,85),
+		random(55,75),
+		random(45,65),
+		random(35,55),
+		random(25,45),
+		random(15,35),
+		random(5,20)
+	];
+
+	// Sort descending (longest first)
+	randomDurations.sort((a,b)=>b-a);
+
+	const tasks = [
+		{
+			id:'cit',
+			title:'Cash-In-Transit (CIT)',
+			duration:100,
+			status:'NOT OK'
+		},
+		{
+			id:'tcoh',
+			title:'Teller Cash On Hand Brinets'
+		},
+		{
+			id:'rtgs',
+			title:'Outward RTGS'
+		},
+		{
+			id:'opt',
+			title:'Override Pending Transaction'
+		},
+		{
+			id:'uej',
+			title:'Unverified EJ'
+		},
+		{
+			id:'lpot',
+			title:'Local Pending Offline Transaction'
+		},
+		{
+			id:'lt',
+			title:'Local Timeout'
+		},
+		{
+			id:'lu',
+			title:'Local Users'
+		},
+		{
+			id:'urn',
+			title:'User Release NDS'
+		}
+	];
+	
+	// Randomize durations (except CIT)
+	const durations = [];
+
+	for(let i=0;i<8;i++){
+		durations.push(Math.floor(Math.random()*81)+10);
+	}
+
+	durations.sort((a,b)=>b-a);
+
+	// Assign durations
+	for(let i=1;i<tasks.length;i++){
+
+		tasks[i].duration = durations[i-1];
+		tasks[i].status = "NOT OK";
+
+	}
+
+	// Randomize two completed services
+	let indexes = [1,2,3,4,5,6,7,8];
+
+	indexes.sort(()=>Math.random()-0.5);
+
+	tasks[indexes[0]].status = "OK";
+	tasks[indexes[1]].status = "OK";
 
     // Format mata uang untuk tampilan
     function formatCurrency(amount) {
@@ -307,23 +379,34 @@ BRI SOPs -->
             tr.innerHTML = `
                 <td style="text-align: center; font-weight: bold;">${index + 1}</td>
                 <td>${task.title}</td>
-                <td>
-                    <div style="font-size: 0.85rem; margin-bottom: 3px;">Relatif: ${task.duration}%</div>
-                    <div class="priority-bar-container">
-                        <div class="priority-bar" style="width: ${task.duration}%; ${task.duration > 70 ? 'background-color: var(--danger-red);' : task.duration > 40 ? 'background-color: var(--warning-orange);' : 'background-color: var(--success-green);'}"></div>
-                    </div>
-                </td>
+				<td>
+
+					${
+						task.status === "OK"
+						? "<div style='font-size:12px;font-weight:bold;color:#28A745;margin-bottom:5px;'>Completed</div>"
+						: "<div style='font-size:12px;margin-bottom:5px;'>Priority Score: " + task.duration + "</div>"
+					}
+
+					<div class="priority-bar-container">
+						<div class="priority-bar"
+							style="
+								width:${task.duration}%;
+								${
+									task.duration > 70
+									? 'background-color: var(--danger-red);'
+									: task.duration > 40
+									? 'background-color: var(--warning-orange);'
+									: 'background-color: var(--success-green);'
+								}
+							">
+						</div>
+					</div>
+
+				</td>
                 <td><span class="status-badge ${statusClass}">${task.status}</span></td>
-                <td>
-                    <button class="btn-approve" onclick="approveTask('${task.id}')" ${disableButton}>
-                        ${task.status === 'OK' ? 'Disetujui' : 'Setujui'}
-                    </button>
-                </td>
             `;
             tbody.appendChild(tr);
         });
-
-        checkAllOk();
     }
 
     // Logika Persetujuan (Approve) & HARDBLOCK
@@ -345,28 +428,46 @@ BRI SOPs -->
     };
 
     // Simulasi kedatangan uang
-    document.getElementById('btnSimulate').addEventListener('click', function() {
-        currentCashY = targetCashX;
-        updateCITMonitor();
-        alert("Simulasi: Uang telah tiba. Vault kini sesuai dengan target manifes.");
-    });
+	document.getElementById("btnSimulate").addEventListener("click",()=>{
 
-    // Cek apakah semua task sudah OK untuk membuka tombol "Tutup Cabang"
-    function checkAllOk() {
-        const allOk = tasks.every(task => task.status === 'OK');
-        const btnClose = document.getElementById('btnCloseBranch');
-        
-        if (allOk) {
-            btnClose.disabled = false;
-        } else {
-            btnClose.disabled = true;
-        }
-    }
+		currentCashY=targetCashX;
+
+		updateCITMonitor();
+
+		tasks.forEach(task=>{
+
+			task.status="OK";
+
+		});
+
+		renderTable();
+
+	});
+
 
     // Eksekusi penutupan cabang
-    document.getElementById('btnCloseBranch').addEventListener('click', function() {
-        alert("Sistem Cabang Berhasil Ditutup!");
-    });
+	document.getElementById("btnCloseBranch").addEventListener("click", () => {
+
+		const allOK = tasks.every(task => task.status === "OK");
+
+		if (!allOK) {
+
+			alert(
+				"🚫 HARDBLOCK ACTIVATED\n\n" +
+				"Close Branch cannot be executed.\n\n" +
+				"Cash-In-Transit has not fully arrived.\n\n" +
+				"Current Cash : " + formatCurrency(currentCashY) + "\n" +
+				"Expected Cash : " + formatCurrency(targetCashX)
+			);
+
+			return;
+		}
+
+		alert(
+			"✅ Close Branch Sukses!\n\n"
+		);
+
+	});
 
     // Inisialisasi awal
     updateCITMonitor();
